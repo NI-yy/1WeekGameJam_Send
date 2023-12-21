@@ -44,7 +44,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
             MoveMeter();
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             if (grabObj == null)
             {
@@ -65,39 +65,6 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
                     grabObj.transform.position = grabPoint.position;
                     grabObj.transform.SetParent(transform);
-
-
-                    //if (grabObj.GetComponent<PresentBoxController>().OnGround())
-                    //{
-                    //    //î†Ç™ê⁄ínÇµÇƒÇ¢ÇÈÇ∆Ç´Ç…Ç‡ÇƒÇÈ
-                    //    grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
-                    //    grabObj.transform.position = grabPoint.position;
-                    //    grabObj.transform.SetParent(transform);
-
-                    //    _moveCharacterAction.isHolding = true;
-                    //}
-                    //else
-                    //{
-                    //    //î†Ç™ê⁄ínÇµÇƒÇ®ÇÁÇ∏ÅAÇ©Ç¬èRÇÁÇÍÇƒÇ¢Ç»Ç¢Ç∆Ç´èRÇÍÇÈ
-                    //    if (!(grabObj.GetComponent<PresentBoxController>().kicked))
-                    //    {
-                    //        Rigidbody2D rb = grabObj.GetComponent<Rigidbody2D>();
-                    //        if (isRight())
-                    //        {
-                    //            rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
-                    //        }
-                    //        else
-                    //        {
-                    //            rb.AddForce(new Vector2(-1 * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
-                    //        }
-
-                    //        grabObj.GetComponent<PresentBoxController>().kicked = true;
-                    //    }
-
-                    //    grabObj = null;
-                    //}
-
-
                 }
             }
             else
