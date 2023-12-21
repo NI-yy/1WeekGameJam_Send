@@ -6,7 +6,7 @@ using unityroom.Api;
 using UnityEditor;
 #endif
 
-public class ScoreManager
+public class SaveManager
 {
     static int stageCount = 9;
 

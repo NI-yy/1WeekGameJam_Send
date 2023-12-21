@@ -9,7 +9,7 @@ public class TestScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreManager.SaveAndSendScoreOnStage(0, score);
+        SaveManager.SaveAndSendScoreOnStage(0, score);
     }
 
     // Update is called once per frame
