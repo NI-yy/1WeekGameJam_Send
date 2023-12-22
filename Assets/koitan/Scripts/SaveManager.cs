@@ -22,6 +22,7 @@ public class SaveManager
 
     /// <summary>
     /// ステージのスコアをセーブします
+    /// クリアしたステージ番号も更新します
     /// </summary>
     /// <param name="stageNum">ステージ番号</param>
     /// <param name="score">スコア</param>
@@ -36,6 +37,7 @@ public class SaveManager
             }
         }
         PlayerPrefs.SetInt($"HighScore_Stage_{stageNum}", score);
+        SaveStageFinishNumber(stageNum);
         SendHighScore();
     }
 
@@ -45,7 +47,7 @@ public class SaveManager
     /// <returns></returns>
     public static int GetStageFinishNumber()
     {
-        return PlayerPrefs.GetInt("FinishStageNum", -1);
+        return PlayerPrefs.GetInt("FinishStageNum", 0);
     }
 
     /// <summary>
@@ -54,7 +56,10 @@ public class SaveManager
     /// <param name="stageNum">ステージ番号</param>
     public static void SaveStageFinishNumber(int stageNum)
     {
-        PlayerPrefs.SetInt("FinishStageNum", stageNum);
+        if (stageNum > GetStageFinishNumber())
+        {
+            PlayerPrefs.SetInt("FinishStageNum", stageNum);
+        }
     }
 
     static int GetScoreSum()
@@ -80,6 +85,7 @@ public class SaveManager
         {
             PlayerPrefs.DeleteKey($"HighScore_Stage_{i + 1}");
         }
+        PlayerPrefs.DeleteKey($"FinishStageNum");
         Debug.Log("セーブデータを消しました");
     }
 #endif
