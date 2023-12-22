@@ -69,7 +69,7 @@ public class SaveManager
 
     static void SendHighScore()
     {
-        UnityroomApiClient.Instance.SendScore(0, GetScoreSum(), ScoreboardWriteMode.HighScoreDesc);
+        UnityroomApiClient.Instance.SendScore(1, GetScoreSum(), ScoreboardWriteMode.HighScoreDesc);
     }
 
 #if UNITY_EDITOR
