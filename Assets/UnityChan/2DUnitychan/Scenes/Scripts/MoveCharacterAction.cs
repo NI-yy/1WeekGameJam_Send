@@ -44,7 +44,7 @@ public class MoveCharacterAction : MonoBehaviour
 
 
 		var distanceFromGround = Physics2D.Raycast (transform.position, Vector3.down, 1, groundMask);
-
+		//Debug.Log(distanceFromGround.collider.gameObject);
 		// update animator parameters
 		animator.SetBool (hashIsCrouch, isDown);
 		animator.SetFloat (hashGroundDistance, distanceFromGround.distance == 0 ? 99 : distanceFromGround.distance - characterHeightOffset);
