@@ -24,12 +24,6 @@ public class SelectLevel : MonoBehaviour
 
     private Tween hoverTween;
 
-    private void Start()
-    {
-        TextMeshProUGUI text = GetComponentInChildren<TextMeshProUGUI>();
-        text.text = level.ToString();
-    }
-
     public enum CharacterFacing
     {
         left,
@@ -42,7 +36,7 @@ public class SelectLevel : MonoBehaviour
         characterTransform.position = characterTargetCoordinate;
         characterTransform.DOMove(characterTransform.position - new Vector3(0, 0.3f, 0), 0.15f);
         Vector3 scale = characterTransform.localScale;
-        characterTransform.localScale = new Vector3(facing == CharacterFacing.right ? scale.x : scale.x * -1, scale.y, scale.z);
+        characterTransform.localScale = new Vector3(facing == CharacterFacing.right ? Mathf.Abs(scale.x) : Mathf.Abs(scale.x) * -1, scale.y, scale.z);
     }
 
     public void StartAnimation()
@@ -63,9 +57,13 @@ public class SelectLevel : MonoBehaviour
     {
         AudioSource source = GetComponent<AudioSource>();
         source.PlayOneShot(transitionClip);
+
+        SpriteRenderer spriteRenderer = character.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = kickSprite;
+
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(transform.position + moveTargetPoint, animationDuration).SetEase(Ease.Linear));
-        sequence.Join(transform.DORotate(new Vector3(0, 0, 3600), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear));
+        sequence.Join(transform.DORotate(new Vector3(0, 0, 1800), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear));
         sequence.OnComplete(() => SceneManager.LoadScene("Stage" + level.ToString()));
     }
 }
