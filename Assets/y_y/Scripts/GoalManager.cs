@@ -11,6 +11,7 @@ public class GoalManager : MonoBehaviour
     [SerializeField] GameObject ScoreManager;
     [SerializeField] GameObject ClearUIManager;
     [SerializeField] StageNumManager StageNumManager;
+    [SerializeField] GameObject PoseUIManager;
 
     private ScoreManager _scoreManager;
     float total_score = 0f;
@@ -32,7 +33,7 @@ public class GoalManager : MonoBehaviour
         var obj = collision.gameObject;
         if (obj.tag == "Player")
         {
-            Debug.Log("Goal");
+            PoseUIManager.GetComponent<PoseUIManager>().is_over = true;
             total_score = _scoreManager.CalScore();
             SaveManager.SaveAndSendScoreOnStage(StageNumManager.current_stage_num, (int)total_score);
             ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
@@ -41,13 +42,11 @@ public class GoalManager : MonoBehaviour
         {
             Destroy(obj);
             _scoreManager.AddScore(10f);
-            Debug.Log("Score: " + score_box);
         }
         else if (obj.tag == "BigPresentBox")
         {
             Destroy(obj);
             _scoreManager.AddScore(50f);
-            Debug.Log("Score: " + score_box);
         }
     }
 }

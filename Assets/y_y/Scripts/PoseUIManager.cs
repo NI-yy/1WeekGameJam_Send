@@ -8,6 +8,8 @@ public class PoseUIManager : MonoBehaviour
 
     private bool flag = true;
 
+    public bool is_over = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,21 +19,25 @@ public class PoseUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (!(is_over))
         {
-            if (flag)
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                Time.timeScale = 0;
-                PoseCanvas.SetActive(true);
-                flag = false;
+                if (flag)
+                {
+                    Time.timeScale = 0;
+                    PoseCanvas.SetActive(true);
+                    flag = false;
+                }
+                else
+                {
+                    Time.timeScale = 1;
+                    PoseCanvas.SetActive(false);
+                    flag = true;
+                }
+
             }
-            else
-            {
-                Time.timeScale = 1;
-                PoseCanvas.SetActive(false);
-                flag = true;
-            }
-            
         }
+        
     }
 }

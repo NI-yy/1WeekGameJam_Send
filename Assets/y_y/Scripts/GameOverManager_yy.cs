@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOverManager_yy : MonoBehaviour
 {
     [SerializeField] GameObject GameOverCanvas;
+    [SerializeField] GameObject PoseUIManager;
 
     int currentSceneIndex;
 
@@ -17,7 +18,7 @@ public class GameOverManager_yy : MonoBehaviour
 
     public void ActivateGameOverUI()
     {
-        Debug.Log("ActivateGameOverUI");
+        PoseUIManager.GetComponent<PoseUIManager>().is_over = true;
         Time.timeScale = 0;
         GameOverCanvas.SetActive(true);
     }
