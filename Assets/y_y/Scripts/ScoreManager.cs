@@ -5,8 +5,8 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    private float current_score = 0f;
-    private float score = 0f;
+    private float current_score = 0;
+    private float score = 0;
 
     [SerializeField] GameObject timeManager;
     public TextMeshProUGUI scoreText;
