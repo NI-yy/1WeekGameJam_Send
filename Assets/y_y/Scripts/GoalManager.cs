@@ -1,6 +1,8 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GoalManager : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class GoalManager : MonoBehaviour
     [SerializeField] GameObject ClearUIManager;
 
     private ScoreManager _scoreManager;
+    float total_score = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class GoalManager : MonoBehaviour
         if(obj.tag == "Player")
         {
             Debug.Log("Goal");
-            float total_score = _scoreManager.CalScore();
+            total_score = _scoreManager.CalScore();
             ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
         }
         else if (obj.tag == "PresentBox")
