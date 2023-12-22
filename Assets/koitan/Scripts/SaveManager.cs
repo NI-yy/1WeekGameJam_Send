@@ -60,9 +60,9 @@ public class SaveManager
     static int GetScoreSum()
     {
         int sum = 0;
-        for (int i = 1; i < stageCount; i++)
+        for (int i = 0; i < stageCount; i++)
         {
-            sum += PlayerPrefs.GetInt($"HighScore_Stage_{i}", 0);
+            sum += PlayerPrefs.GetInt($"HighScore_Stage_{i + 1}", 0);
         }
         return sum;
     }
@@ -76,9 +76,9 @@ public class SaveManager
     [MenuItem("koitan/DeleteSaveData")]
     static void DeleteSaveData()
     {
-        for (int i = 1; i < stageCount; i++)
+        for (int i = 0; i < stageCount; i++)
         {
-            PlayerPrefs.DeleteKey($"HighScore_Stage_{i}");
+            PlayerPrefs.DeleteKey($"HighScore_Stage_{i + 1}");
         }
         Debug.Log("セーブデータを消しました");
     }
