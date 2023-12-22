@@ -10,6 +10,7 @@ public class GoalManager : MonoBehaviour
     [SerializeField] GameObject TimeManager;
     [SerializeField] GameObject ScoreManager;
     [SerializeField] GameObject ClearUIManager;
+    [SerializeField] StageNumManager StageNumManager;
 
     private ScoreManager _scoreManager;
     float total_score = 0f;
@@ -23,16 +24,17 @@ public class GoalManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var obj = collision.gameObject;
-        if(obj.tag == "Player")
+        if (obj.tag == "Player")
         {
             Debug.Log("Goal");
             total_score = _scoreManager.CalScore();
+            SaveManager.SaveAndSendScoreOnStage(StageNumManager.current_stage_num, (int)total_score);
             ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
         }
         else if (obj.tag == "PresentBox")

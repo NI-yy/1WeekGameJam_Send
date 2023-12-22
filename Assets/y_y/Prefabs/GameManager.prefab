@@ -3665,6 +3665,7 @@ MonoBehaviour:
   TimeManager: {fileID: 647578208471057569}
   ScoreManager: {fileID: 4060966269752891346}
   ClearUIManager: {fileID: 4471294845353348137}
+  StageNumManager: {fileID: 3541339742273644541}
 --- !u!1 &7667127310766429424
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,6 +4615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85193db2e70d4634595b627cb2db29b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  current_stage_num: 0
 --- !u!1 &8756317152859830731
 GameObject:
   m_ObjectHideFlags: 0
