@@ -20,16 +20,18 @@ public class GoalManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var obj = collision.gameObject;
-        if(obj.tag == "Player")
+        if (obj.tag == "Player")
         {
             Debug.Log("Goal");
             float total_score = _scoreManager.CalScore();
+            // by koitan
+            SaveManager.SaveAndSendScoreOnStage(0, (int)total_score);
             ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
         }
         else if (obj.tag == "PresentBox")
