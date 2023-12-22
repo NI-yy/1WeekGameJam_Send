@@ -54,7 +54,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
 
 
-                if (hit.collider != null && hit.collider.tag == "PresentBox")
+                if (hit.collider != null && (hit.collider.tag == "PresentBox" || hit.collider.tag == "ParachuteBox"))
                 {
                     grabObj = hit.collider.gameObject;
                     grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -78,9 +78,12 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     rb.AddForce(new Vector2(-1f * X_throwAmount, 1f * Y_throwAmount), ForceMode2D.Impulse);
                 }
 
+                if(grabObj.tag == "ParachuteBox")
+                {
+                    grabObj.GetComponent<ParachuteBoxController>().parachuteThrown = true;
+                }
+
                 grabObj = null;
-
-
             }
         }
     }

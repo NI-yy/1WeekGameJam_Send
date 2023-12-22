@@ -8,11 +8,12 @@ public class ParachuteBoxController : MonoBehaviour
     public bool parachuteThrown = false;
 
     private float time = 0f;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,8 +24,13 @@ public class ParachuteBoxController : MonoBehaviour
             time += Time.deltaTime;
             if(time >= timeForFreeze)
             {
-                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                Debug.Log("Freeze");
+                // XŽ²‚ÆYŽ²‚ÌˆÊ’u‚ðŒÅ’è‚·‚é
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+
+                // ZŽ²‚Ì‰ñ“]‚ðŒÅ’è‚·‚é
+                rb.constraints |= RigidbodyConstraints2D.FreezeRotation;
+
                 GetComponent<BoxCollider2D>().isTrigger = false;
 
                 time = 0f;
