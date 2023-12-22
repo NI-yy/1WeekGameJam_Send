@@ -39,7 +39,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKey(KeyCode.X))
         {
             if (grabObj == null)
             {
@@ -62,7 +62,11 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     grabObj.transform.SetParent(transform);
                 }
             }
-            else
+        }
+
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            if(grabObj != null)
             {
                 //“Š‚°‚é
                 grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
@@ -78,13 +82,14 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     rb.AddForce(new Vector2(-1f * X_throwAmount, 1f * Y_throwAmount), ForceMode2D.Impulse);
                 }
 
-                if(grabObj.tag == "ParachuteBox")
+                if (grabObj.tag == "ParachuteBox")
                 {
                     grabObj.GetComponent<ParachuteBoxController>().parachuteThrown = true;
                 }
 
                 grabObj = null;
             }
+            
         }
     }
 

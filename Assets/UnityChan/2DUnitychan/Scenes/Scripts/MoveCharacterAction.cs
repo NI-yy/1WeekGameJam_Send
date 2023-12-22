@@ -33,7 +33,7 @@ public class MoveCharacterAction : MonoBehaviour
 		bool isDown = Input.GetAxisRaw ("Vertical") < 0;
 
         Vector2 velocity = rig2d.velocity;
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetKeyDown(KeyCode.Z)) {
 			velocity.y = 5;
 		}
 		if (axis != 0){

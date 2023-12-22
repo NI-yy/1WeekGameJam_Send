@@ -2243,6 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoseCanvas: {fileID: 3559589899312990479}
+  is_over: 0
 --- !u!1 &4294831615132459449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3666,6 +3667,7 @@ MonoBehaviour:
   ScoreManager: {fileID: 4060966269752891346}
   ClearUIManager: {fileID: 4471294845353348137}
   StageNumManager: {fileID: 3541339742273644541}
+  PoseUIManager: {fileID: 4112625593302465505}
 --- !u!1 &7667127310766429424
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,6 +4050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverCanvas: {fileID: 8166593904140007621}
+  PoseUIManager: {fileID: 4112625593302465505}
 --- !u!1 &8137156916760213875
 GameObject:
   m_ObjectHideFlags: 0
