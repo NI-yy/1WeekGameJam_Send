@@ -23,10 +23,10 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-    public void CalScore()
+    public float CalScore()
     {
         score = current_score + timeManager.GetComponent<TimeManager>().GetTime();
-        Debug.Log("total_score: " + score);
+        return score;
     }
 
     public void AddScore(float point)

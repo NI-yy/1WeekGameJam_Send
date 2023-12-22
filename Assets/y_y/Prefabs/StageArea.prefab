@@ -100,20 +100,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 5409878956379275324}
     m_ColliderPaths:
-    - - X: 114143928
-        Y: 50046312
-      - X: -29357938
-        Y: 50046312
-      - X: -29357938
-        Y: -8717613
-      - X: 114143928
-        Y: -8717613
+    - - X: 54679848
+        Y: 49929676
+      - X: -29357992
+        Y: 49929676
+      - X: -29357992
+        Y: -13799772
+      - X: 54679848
+        Y: -13799772
   m_CompositePaths:
     m_Paths:
-    - - {x: 11.414363, y: -0.8717613}
-      - {x: 11.414363, y: 5.004631}
-      - {x: -2.9357939, y: 5.004602}
-      - {x: -2.9357646, y: -0.8717613}
+    - - {x: 5.4679556, y: -1.3799772}
+      - {x: 5.4679556, y: 4.9929676}
+      - {x: -2.9357991, y: 4.9929385}
+      - {x: -2.93577, y: -1.3799772}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 4.2392993, y: 2.0664349}
+  m_Offset: {x: 1.2660928, y: 1.8064952}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,5 +161,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.350186, y: 5.8763924}
+  m_Size: {x: 8.403784, y: 6.372945}
   m_EdgeRadius: 0

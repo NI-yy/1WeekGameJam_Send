@@ -7,6 +7,7 @@ public class GoalManager : MonoBehaviour
     private int score_box = 0;
     [SerializeField] GameObject TimeManager;
     [SerializeField] GameObject ScoreManager;
+    [SerializeField] GameObject ClearUIManager;
 
     private ScoreManager _scoreManager;
 
@@ -28,7 +29,8 @@ public class GoalManager : MonoBehaviour
         if(obj.tag == "Player")
         {
             Debug.Log("Goal");
-            _scoreManager.CalScore();
+            float total_score = _scoreManager.CalScore();
+            ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
         }
         else if (obj.tag == "PresentBox")
         {

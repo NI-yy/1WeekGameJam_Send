@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/y_y/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/y_y/Scenes/TitleScene_yy.unity
+    guid: 216d8147dc599274a82ed8efd41cb37c
+  - enabled: 1
+    path: Assets/y_y/Scenes/StageSelectScene_yy.unity
+    guid: 20e0051ac6507254e9ae083c32e919e7
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage1.unity
+    guid: 70a357f9d1bc61b469dc6b146c115933
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage2.unity
+    guid: 1654edb38aec77d41b5154dc88a6b5aa
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage3.unity
+    guid: 55a7e8d67b8600c44a8a80167d7a7fab
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage4.unity
+    guid: 7305a0ffae163af43b8474225ab6cd4b
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage5.unity
+    guid: 450a71ecebc54eb47a23ee67628d14ab
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage6.unity
+    guid: 7cd48d47beaf27148a2066196efc3a61
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage7.unity
+    guid: 94e6d3935f9b27940a36dc29a15c80e8
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage8.unity
+    guid: 8da3fa463bd8d1c4599d8a00319177ad
+  - enabled: 1
+    path: Assets/y_y/Scenes/Stage9.unity
+    guid: 11df31c1466d6cc45b34f456b21102df
   m_configObjects: {}

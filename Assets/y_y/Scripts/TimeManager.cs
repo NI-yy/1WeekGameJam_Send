@@ -12,6 +12,10 @@ public class TimeManager : MonoBehaviour
 
     public TextMeshProUGUI timerText; // UIテキスト要素（UnityのCanvas内に配置されている必要があります）
 
+    [SerializeField] GameObject GameOverUIManager;
+
+    private bool timeIsUp = false;
+
     void Start()
     {
         timer = timeLimit;
@@ -20,14 +24,19 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
-        UpdateTimerDisplay();
+        if (!(timeIsUp))
+        {
+            timer -= Time.deltaTime;
+            UpdateTimerDisplay();
+        }
+        
 
-        if (timer <= 0)
+        if (timer <= 0 && !(timeIsUp))
         {
             // タイマーが終了した時の処理
             timer = 0;
-            Debug.Log("GameOver");
+            GameOverUIManager.GetComponent<GameOverManager_yy>().ActivateGameOverUI();
+            timeIsUp = true;
         }
     }
 
@@ -35,7 +44,7 @@ public class TimeManager : MonoBehaviour
     {
         if (timerText != null)
         {
-            timerText.text = timer.ToString("F2"); // タイマーをテキストに表示（小数点以下2桁まで表示）
+            timerText.text = timer.ToString("F0"); // タイマーをテキストに表示（小数点以下2桁まで表示）
         }
     }
 
