@@ -23,7 +23,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
     MoveCharacterAction _moveCharacterAction;
 
-    private bool meter_isOn = false;
+    //private bool meter_isOn = false;
 
     private bool changeRotate;
     private float rotate;
@@ -39,11 +39,6 @@ public class PlayerActionToPresentBox : MonoBehaviour
     void Update()
     {
 
-        if (meter_isOn)
-        {
-            MoveMeter();
-        }
-
         if (Input.GetKeyDown(KeyCode.X))
         {
             if (grabObj == null)
@@ -57,8 +52,8 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
                 }
 
-                
-                
+
+
                 if (hit.collider != null && hit.collider.tag == "PresentBox")
                 {
                     grabObj = hit.collider.gameObject;
@@ -69,38 +64,23 @@ public class PlayerActionToPresentBox : MonoBehaviour
             }
             else
             {
-                if (meter_isOn)
+                //“Š‚°‚é
+                grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
+                grabObj.transform.SetParent(null);
+                Rigidbody2D rb = grabObj.GetComponent<Rigidbody2D>();
+
+                if (isRight())
                 {
-                    //“Š‚°‚é
-                    grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
-                    grabObj.transform.SetParent(null);
-                    Rigidbody2D rb = grabObj.GetComponent<Rigidbody2D>();
-
-                    if (isRight())
-                    {
-                        rb.AddForce(new Vector2(Mathf.Cos(currentDegree * Mathf.Deg2Rad) * X_throwAmount, Mathf.Sin(currentDegree * Mathf.Deg2Rad) * Y_throwAmount), ForceMode2D.Impulse);
-                        Debug.Log((currentDegree, Mathf.Deg2Rad, currentDegree * Mathf.Deg2Rad));
-                        Debug.Log((Mathf.Cos(currentDegree * Mathf.Deg2Rad), Mathf.Sin(currentDegree * Mathf.Deg2Rad)));
-                    }
-                    else
-                    {
-                        rb.AddForce(new Vector2(-Mathf.Cos(currentDegree * Mathf.Deg2Rad) * X_throwAmount, Mathf.Sin(currentDegree * Mathf.Deg2Rad) * Y_throwAmount), ForceMode2D.Impulse);
-                    }
-
-                    grabObj = null;
-
-                    meter.SetActive(false);
-                    meter_isOn = false;
+                    rb.AddForce(new Vector2(1f * X_throwAmount, 1f * Y_throwAmount), ForceMode2D.Impulse);
                 }
                 else
                 {
-                    meter.SetActive(true);
-                    meter.transform.localEulerAngles = new Vector3(0f, 0f, initDegree);
-
-                    currentDegree = initDegree;
-                    meter_isOn = true;
+                    rb.AddForce(new Vector2(-1f * X_throwAmount, 1f * Y_throwAmount), ForceMode2D.Impulse);
                 }
-                
+
+                grabObj = null;
+
+
             }
         }
     }
@@ -129,7 +109,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "PresentBox")
+        if (collision.gameObject.tag == "PresentBox")
         {
             float diff = collision.gameObject.transform.position.x - this.gameObject.transform.position.x;
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
@@ -138,7 +118,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
             {
                 rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
             }
-            else if(diff < 0 && !(isRight()))
+            else if (diff < 0 && !(isRight()))
             {
                 rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
             }
