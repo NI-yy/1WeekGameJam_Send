@@ -41,14 +41,7 @@ public class SceneTransition : MonoBehaviour
             }
             if(timeUpToSceneTransition < sceneTransitionTime)
             {
-                if (transitionLevel == 1)
-                {
-                    SceneManager.LoadScene("Stage" + transitionLevel.ToString() + "_Test");
-                }
-                else
-                {
-                    SceneManager.LoadScene("Stage" + transitionLevel.ToString());
-                }
+                SceneManager.LoadScene("Stage" + transitionLevel.ToString());
             }
         }
     }

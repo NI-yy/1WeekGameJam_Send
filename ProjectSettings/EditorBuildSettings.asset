@@ -38,7 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/y_y/Scenes/Stage9.unity
     guid: 11df31c1466d6cc45b34f456b21102df
-  - enabled: 1
-    path: Assets/malen/Scenes/Stage1_Test.unity
-    guid: 7e5a30d0e48ab9d46b11a7a53c33b24e
   m_configObjects: {}
