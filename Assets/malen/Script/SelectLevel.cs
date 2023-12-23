@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening;
 using static Unity.VisualScripting.Member;
+using UnityEngine.Rendering;
+using System.Diagnostics.Contracts;
 
 public class SelectLevel : MonoBehaviour
 {
@@ -21,8 +23,12 @@ public class SelectLevel : MonoBehaviour
     public GameObject character;
     public Sprite normalSprite;
     public Sprite kickSprite;
+    public TextMeshProUGUI levelText;
+    public GameObject sceneTransitionImages;
+    public Button[] allButtons;
 
     private Tween hoverTween;
+    private Tween levelNumberTween;
 
     public enum CharacterFacing
     {
@@ -44,6 +50,8 @@ public class SelectLevel : MonoBehaviour
         if (hoverTween != null) 
             hoverTween.Kill();
         hoverTween = transform.DOScale(expansionRate, animationInterval).SetLoops(-1, LoopType.Yoyo);
+        levelText.text = "" + level;
+        levelNumberTween = levelText.transform.DOScale(1.5f, 0.1f).SetLoops(2, LoopType.Yoyo);
     }
 
     public void StopAnimation()
@@ -51,6 +59,8 @@ public class SelectLevel : MonoBehaviour
         if (hoverTween != null) 
             hoverTween.Kill();
         transform.DOScale(1f, animationInterval);
+        levelNumberTween.Kill();
+        levelText.transform.localScale = Vector3.one;
     }
 
     public void StartLevel()
@@ -58,12 +68,17 @@ public class SelectLevel : MonoBehaviour
         AudioSource source = GetComponent<AudioSource>();
         source.PlayOneShot(transitionClip);
 
-        SpriteRenderer spriteRenderer = character.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = kickSprite;
+        Animator animator = character.GetComponent<Animator>();
+        animator.SetTrigger("kick_trigger");
+
+        for(int i = 0; i < allButtons.Length; i++)
+        {
+            allButtons[i].interactable = false;
+        }
 
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(transform.position + moveTargetPoint, animationDuration).SetEase(Ease.Linear));
         sequence.Join(transform.DORotate(new Vector3(0, 0, 1800), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear));
-        sequence.OnComplete(() => SceneManager.LoadScene("Stage" + level.ToString()));
+        sequence.OnComplete(() => sceneTransitionImages.GetComponent<SceneTransition>().SceneTransitionStart(level));
     }
 }
