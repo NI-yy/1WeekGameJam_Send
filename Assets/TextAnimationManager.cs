@@ -14,12 +14,20 @@ public class TextAnimationManager : MonoBehaviour
         Clear_text.progress += Time.unscaledDeltaTime / 2;
         if (Clear_text.progress > 1 ) Clear_text.progress = 0;
 
-        Score.progress += Time.unscaledDeltaTime / 2;
+        if(Score != null)
+        {
+            Score.progress += Time.unscaledDeltaTime / 2;
+        }
+        
 
         delay += Time.unscaledDeltaTime;
         if (delay > 2)
         {
-            Score_text.progress += Time.unscaledDeltaTime / 2;
+            if (Score_text != null)
+            {
+                Score_text.progress += Time.unscaledDeltaTime / 2;
+            }
+            
         }
     }
 }

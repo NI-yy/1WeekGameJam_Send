@@ -177,9 +177,10 @@ MonoBehaviour:
   rayDistance: 0.01
   X_throwAmount: 3
   Y_throwAmount: 3
-  X_kickAmount: 2
-  Y_kickAmount: 3
+  X_kickAmount: 20
+  Y_kickAmount: 30
   meter: {fileID: 0}
+  forceAmount: 100
   initDegree: 0
 --- !u!114 &9115169335836094567
 MonoBehaviour:

@@ -20,6 +20,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
     [SerializeField] float Y_kickAmount = 1f;
 
     [SerializeField] GameObject meter;
+    [SerializeField] float forceAmount = 1f;
 
     MoveCharacterAction _moveCharacterAction;
 
@@ -82,10 +83,12 @@ public class PlayerActionToPresentBox : MonoBehaviour
                 if (isRight())
                 {
                     rb.AddForce(new Vector2(1f * X_throwAmount, 1f * Y_throwAmount), ForceMode2D.Impulse);
+                    //rb.velocity = new Vector2(1f * X_throwAmount, 1f * Y_throwAmount) * Time.deltaTime * forceAmount;
                 }
                 else
                 {
                     rb.AddForce(new Vector2(-1f * X_throwAmount, 1f * Y_throwAmount), ForceMode2D.Impulse);
+                    //rb.velocity = new Vector2(1f * X_throwAmount, 1f * Y_throwAmount) * Time.deltaTime * forceAmount;
                 }
 
                 if (grabObj.tag == "ParachuteBox")
@@ -119,11 +122,13 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
                 if (diff > 0 && isRight())
                 {
-                    rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
+                    rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
+                    //rb.velocity = new Vector2(1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
                 }
                 else if (diff < 0 && !(isRight()))
                 {
-                    rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
+                    rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
+                    //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
                 }
 
                 _playerController_yy.KickAnim();
