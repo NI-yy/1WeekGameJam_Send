@@ -13,7 +13,7 @@ public class TitleBackGroundMover : MonoBehaviour
 
     private void Start()
     {
-        if (GetComponent<Image>() is Image i)
+        if (GetComponent<SpriteRenderer>() is SpriteRenderer i)
         {
             m_material = i.material;
         }
