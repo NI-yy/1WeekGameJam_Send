@@ -31,13 +31,17 @@ public class PlayerActionToPresentBox : MonoBehaviour
     private float currentDegree;
     [SerializeField] float initDegree = 0f;
 
+    PlayerController_yy _playerController_yy;
+
     private void Start()
     {
         _moveCharacterAction = GetComponent<MoveCharacterAction>();
+        _playerController_yy = GetComponent<PlayerController_yy>();
     }
 
     void Update()
     {
+        
 
         if (Input.GetKey(KeyCode.X))
         {
@@ -52,21 +56,23 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
                 }
 
-
+                Debug.Log(hit.collider.gameObject);
 
                 if (hit.collider != null && (hit.collider.tag == "PresentBox" || hit.collider.tag == "ParachuteBox"))
                 {
+                    //éùÇ¬
                     grabObj = hit.collider.gameObject;
                     grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
                     grabObj.transform.position = grabPoint.position;
                     grabObj.transform.SetParent(transform);
+
+                    _playerController_yy.HaveBoxAnim();
                 }
             }
         }
-
-        if (Input.GetKeyUp(KeyCode.X))
+        else if (Input.GetKeyUp(KeyCode.X))
         {
-            if(grabObj != null)
+            if (grabObj != null)
             {
                 //ìäÇ∞ÇÈ
                 grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
@@ -87,9 +93,45 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     grabObj.GetComponent<ParachuteBoxController>().parachuteThrown = true;
                 }
 
+                _playerController_yy.ThrowBoxAnim();
                 grabObj = null;
             }
             
+        }
+        else
+        {
+            _playerController_yy.ThrowBoxAnimFalse();
+
+            if (isRight())
+            {
+                hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPoint.localPosition, rayRadius, transform.right, rayDistance);
+            }
+            else
+            {
+                hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
+            }
+
+            if (hit.collider != null && hit.collider.gameObject.tag == "PresentBox")
+            {
+                //èRÇÈ
+                float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
+                Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+
+                if (diff > 0 && isRight())
+                {
+                    rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
+                }
+                else if (diff < 0 && !(isRight()))
+                {
+                    rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
+                }
+
+                _playerController_yy.KickAnim();
+            }
+            else
+            {
+                _playerController_yy.KickAnimFalse();
+            }
         }
     }
 
@@ -117,20 +159,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "PresentBox")
-        {
-            float diff = collision.gameObject.transform.position.x - this.gameObject.transform.position.x;
-            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-
-            if (diff > 0 && isRight())
-            {
-                rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
-            }
-            else if (diff < 0 && !(isRight()))
-            {
-                rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Impulse);
-            }
-        }
+        
     }
 
     void MoveMeter()
