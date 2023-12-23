@@ -20,7 +20,7 @@ public class TextMeshProGeometryAnimator : MonoBehaviour
 	/// アニメーションプログレス(エディタ確認用)
 	/// </summary>
 	[SerializeField, Range(0.0f, 1.0f)]
-	private float progress = 0.0f;
+	public float progress = 0.0f;
 
 	/// <summary>
 	/// Enable時に再生するかどうか

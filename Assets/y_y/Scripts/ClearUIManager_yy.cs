@@ -19,7 +19,7 @@ public class ClearUIManager_yy : MonoBehaviour
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         currentGameStageNum = GameManager.GetComponent<StageNumManager>().GetCurrentStageNum();
-        Clear_text_score.text = "Stage" + currentGameStageNum.ToString() + "\nScore: ";
+        //Clear_text_score.text = "Stage" + currentGameStageNum.ToString() + "\nScore: ";
     }
 
     public void ActivateClearUI(float score)
