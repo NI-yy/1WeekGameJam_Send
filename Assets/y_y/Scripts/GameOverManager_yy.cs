@@ -8,7 +8,7 @@ public class GameOverManager_yy : MonoBehaviour
 {
     [SerializeField] GameObject GameOverCanvas;
     [SerializeField] GameObject PoseUIManager;
-
+    [SerializeField] GameObject ClearUIManager;
     int currentSceneIndex;
 
     private void Start()
@@ -25,8 +25,8 @@ public class GameOverManager_yy : MonoBehaviour
 
     public void ClickRetryButton()
     {
+        //ClearUIManager.GetComponent<ClearUIManager_yy>().ResetScoreText();
         Time.timeScale = 1;
-        Debug.Log(Time.timeScale);
         SceneManager.LoadScene(currentSceneIndex);
     }
 

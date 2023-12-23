@@ -15,10 +15,13 @@ public class GoalManager : MonoBehaviour
 
     private ScoreManager _scoreManager;
     float total_score = 0f;
+    private bool is_over = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("ResetScore");
+        total_score = 0f;
         _scoreManager = ScoreManager.GetComponent<ScoreManager>();
     }
 
@@ -33,10 +36,18 @@ public class GoalManager : MonoBehaviour
         var obj = collision.gameObject;
         if (obj.tag == "Player")
         {
-            PoseUIManager.GetComponent<PoseUIManager>().is_over = true;
-            total_score = _scoreManager.CalScore();
-            SaveManager.SaveAndSendScoreOnStage(StageNumManager.current_stage_num, (int)total_score);
-            ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
+            if (!(is_over))
+            {
+                Destroy(obj);
+                PoseUIManager.GetComponent<PoseUIManager>().is_over = true;
+                total_score = _scoreManager.CalScore();
+                Debug.Log(("Goal", total_score, this.gameObject));
+                SaveManager.SaveAndSendScoreOnStage(StageNumManager.current_stage_num, (int)total_score);
+                ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
+
+                is_over = true;
+            }
+            
         }
         else if (obj.tag == "PresentBox")
         {
@@ -48,5 +59,10 @@ public class GoalManager : MonoBehaviour
             Destroy(obj);
             _scoreManager.AddScore(50f);
         }
+    }
+
+    public void ResetScore()
+    {
+
     }
 }

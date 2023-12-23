@@ -9,13 +9,17 @@ public class ClearUIManager_yy : MonoBehaviour
     [SerializeField] GameObject ClearCanvas;
     [SerializeField] TextMeshProUGUI Clear_text_score;
     [SerializeField] GameObject ClearUI_NextButton;
+    [SerializeField] GameObject GameManager;
     public bool is_final = false;
+    int currentGameStageNum;
 
     int currentSceneIndex;
 
     private void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        currentGameStageNum = GameManager.GetComponent<StageNumManager>().GetCurrentStageNum();
+        Clear_text_score.text = "Stage" + currentGameStageNum.ToString() + "\nScore: ";
     }
 
     public void ActivateClearUI(float score)
@@ -52,5 +56,10 @@ public class ClearUIManager_yy : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("TitleScene_yy");
+    }
+
+    public void ResetScoreText()
+    {
+        Clear_text_score.text = "Stage01\nScore: ";
     }
 }

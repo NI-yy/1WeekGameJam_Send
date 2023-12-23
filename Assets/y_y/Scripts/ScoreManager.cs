@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        current_score = 0f;
+        score = 0f;
         scoreText.text = current_score.ToString("F1");
     }
 

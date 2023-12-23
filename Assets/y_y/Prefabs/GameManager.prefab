@@ -920,8 +920,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4772989801797469241}
-        m_TargetAssemblyTypeName: ClearUIManager_yy, Assembly-CSharp
+      - m_Target: {fileID: 4649867033656077206}
+        m_TargetAssemblyTypeName: PoseUIManager, Assembly-CSharp
         m_MethodName: ClickRetryButton
         m_Mode: 1
         m_Arguments:
@@ -1344,9 +1344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stage01
-
-    Score: '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2243,6 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoseCanvas: {fileID: 3559589899312990479}
+  ClearUIManager: {fileID: 4471294845353348137}
   is_over: 0
 --- !u!1 &4294831615132459449
 GameObject:
@@ -2426,6 +2425,7 @@ MonoBehaviour:
   ClearCanvas: {fileID: 1014426437333147810}
   Clear_text_score: {fileID: 7069812486695073988}
   ClearUI_NextButton: {fileID: 1502305195974120168}
+  GameManager: {fileID: 8484020999018341421}
   is_final: 0
 --- !u!1 &4845889536554172254
 GameObject:
@@ -2894,8 +2894,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4772989801797469241}
-        m_TargetAssemblyTypeName: ClearUIManager_yy, Assembly-CSharp
+      - m_Target: {fileID: 4649867033656077206}
+        m_TargetAssemblyTypeName: PoseUIManager, Assembly-CSharp
         m_MethodName: ClickTitleButton
         m_Mode: 1
         m_Arguments:
@@ -3298,8 +3298,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4772989801797469241}
-        m_TargetAssemblyTypeName: ClearUIManager_yy, Assembly-CSharp
+      - m_Target: {fileID: 4649867033656077206}
+        m_TargetAssemblyTypeName: PoseUIManager, Assembly-CSharp
         m_MethodName: ClickStageSelectButton
         m_Mode: 1
         m_Arguments:
@@ -4051,6 +4051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverCanvas: {fileID: 8166593904140007621}
   PoseUIManager: {fileID: 4112625593302465505}
+  ClearUIManager: {fileID: 4471294845353348137}
 --- !u!1 &8137156916760213875
 GameObject:
   m_ObjectHideFlags: 0
