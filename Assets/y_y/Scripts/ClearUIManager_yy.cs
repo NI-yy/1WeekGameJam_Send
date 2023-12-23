@@ -49,7 +49,7 @@ public class ClearUIManager_yy : MonoBehaviour
     public void ClickStageSelectButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("StageSelectScene_yy");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void ClickTitleButton()
