@@ -34,6 +34,8 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
     PlayerController_yy _playerController_yy;
 
+    private bool kickFlag = false;
+
     private void Start()
     {
         _moveCharacterAction = GetComponent<MoveCharacterAction>();
@@ -116,25 +118,31 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject.tag == "PresentBox")
             {
-                //èRÇÈ
-                float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
-                Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
-
-                if (diff > 0 && isRight())
+                if (!(kickFlag))
                 {
-                    rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
-                    //rb.velocity = new Vector2(1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
-                }
-                else if (diff < 0 && !(isRight()))
-                {
-                    rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
-                    //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
-                }
+                    //èRÇÈ
+                    float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
+                    Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
 
-                _playerController_yy.KickAnim();
+                    if (diff > 0 && isRight())
+                    {
+                        rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
+                        //rb.velocity = new Vector2(1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
+                    }
+                    else if (diff < 0 && !(isRight()))
+                    {
+                        rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
+                        //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
+                    }
+
+                    _playerController_yy.KickAnim();
+                    kickFlag = true;
+                }
+                
             }
             else
             {
+                kickFlag = false;
                 _playerController_yy.KickAnimFalse();
             }
         }
