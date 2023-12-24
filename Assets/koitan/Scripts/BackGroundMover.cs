@@ -9,11 +9,11 @@ public class BackGroundMover : MonoBehaviour
     [SerializeField]
     Vector2 offset;
     [SerializeField]
-    float followRatio = 1f;
+    Vector2 followRatio = new Vector2(1f, 1f);
+
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -52,7 +52,11 @@ public class BackGroundMover : MonoBehaviour
     {
         if (cameraTransform == null)
         {
-            return;
+            cameraTransform = Camera.main.transform;
+            if (cameraTransform == null)
+            {
+                return;
+            }
         }
         Vector3 pos = transform.position;
         pos.x = offset.x;
