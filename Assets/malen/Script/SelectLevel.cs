@@ -24,16 +24,30 @@ public class SelectLevel : MonoBehaviour
     public Sprite normalSprite;
     public Sprite kickSprite;
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI highScoreText;
     public GameObject sceneTransitionImages;
     public Button[] allButtons;
 
     private Tween hoverTween;
     private Tween levelNumberTween;
+    private Tween highScoreTween;
 
     public enum CharacterFacing
     {
         left,
         right
+    }
+
+    private void Start()
+    {
+        if (level - 1 <= SaveManager.GetStageFinishNumber())
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void CharacterMove()
@@ -47,20 +61,24 @@ public class SelectLevel : MonoBehaviour
 
     public void StartAnimation()
     {
-        if (hoverTween != null) 
+        if (hoverTween != null)
             hoverTween.Kill();
         hoverTween = transform.DOScale(expansionRate, animationInterval).SetLoops(-1, LoopType.Yoyo);
         levelText.text = "" + level;
         levelNumberTween = levelText.transform.DOScale(1.5f, 0.1f).SetLoops(2, LoopType.Yoyo);
+        highScoreText.text = $"{SaveManager.GetScoreOnStage(level)}";
+        highScoreTween = highScoreText.transform.DOScale(1.5f, 0.1f).SetLoops(2, LoopType.Yoyo);
     }
 
     public void StopAnimation()
     {
-        if (hoverTween != null) 
+        if (hoverTween != null)
             hoverTween.Kill();
         transform.DOScale(1f, animationInterval);
         levelNumberTween.Kill();
         levelText.transform.localScale = Vector3.one;
+        highScoreTween.Kill();
+        highScoreText.transform.localScale = Vector3.one;
     }
 
     public void StartLevel()
@@ -71,7 +89,7 @@ public class SelectLevel : MonoBehaviour
         Animator animator = character.GetComponent<Animator>();
         animator.SetTrigger("kick_trigger");
 
-        for(int i = 0; i < allButtons.Length; i++)
+        for (int i = 0; i < allButtons.Length; i++)
         {
             allButtons[i].interactable = false;
         }
