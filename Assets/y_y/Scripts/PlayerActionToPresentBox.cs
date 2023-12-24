@@ -8,6 +8,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
     [SerializeField] private Transform grabPoint;
     [SerializeField] private Transform rayPoint;
     [SerializeField] private Transform rayPointForLeft;
+
     [SerializeField] float rayRadius = 1.0f;
     [SerializeField] float rayDistance = 0.2f;
     private GameObject grabObj;
@@ -23,6 +24,8 @@ public class PlayerActionToPresentBox : MonoBehaviour
     [SerializeField] float forceAmount = 1f;
 
     MoveCharacterAction _moveCharacterAction;
+
+    [SerializeField] ParticleSystem KickedParticleSystem;
 
     //private bool meter_isOn = false;
 
@@ -131,6 +134,8 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     //蹴る
                     float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
                     Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+                    //エフェクト
+                    Instantiate(KickedParticleSystem, hit.point, Quaternion.identity);
 
                     if (diff > 0 && isRight())
                     {

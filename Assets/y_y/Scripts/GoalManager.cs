@@ -12,6 +12,7 @@ public class GoalManager : MonoBehaviour
     [SerializeField] GameObject ClearUIManager;
     [SerializeField] StageNumManager StageNumManager;
     [SerializeField] GameObject PoseUIManager;
+    [SerializeField] ParticleSystem GoaledParticleSystem;
 
     private ScoreManager _scoreManager;
     float total_score = 0f;
@@ -52,11 +53,13 @@ public class GoalManager : MonoBehaviour
         else if (obj.tag == "PresentBox")
         {
             Destroy(obj);
+            Instantiate(GoaledParticleSystem, transform.position, Quaternion.identity);
             _scoreManager.AddScore(10f);
         }
         else if (obj.tag == "BigPresentBox")
         {
             Destroy(obj);
+            Instantiate(GoaledParticleSystem, transform.position, Quaternion.identity);
             _scoreManager.AddScore(50f);
         }
     }
