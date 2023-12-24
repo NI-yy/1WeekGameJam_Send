@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     {
         current_score = 0f;
         score = 0f;
-        scoreText.text = current_score.ToString("F1");
+        scoreText.text = current_score.ToString("F0");
     }
 
     // Update is called once per frame
@@ -27,13 +27,13 @@ public class ScoreManager : MonoBehaviour
 
     public float CalScore()
     {
-        score = current_score + timeManager.GetComponent<TimeManager>().GetTime();
+        score = current_score + (timeManager.GetComponent<TimeManager>().GetTime() / 10f);
         return score;
     }
 
     public void AddScore(float point)
     {
         current_score += point;
-        scoreText.text = current_score.ToString("F1");
+        scoreText.text = current_score.ToString("F0");
     }
 }
