@@ -59,13 +59,18 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
                 }
 
-                Debug.Log(hit.collider.gameObject);
 
                 if (hit.collider != null && (hit.collider.tag == "PresentBox" || hit.collider.tag == "ParachuteBox"))
                 {
                     //‚Â
                     grabObj = hit.collider.gameObject;
                     grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
+                    // X²‚ÆY²‚ÌˆÊ’u‚ğŒÅ’è‚·‚é
+                    grabObj.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+                    // Z²‚Ì‰ñ“]‚ğŒÅ’è‚·‚é
+                    grabObj.GetComponent<Rigidbody2D>().constraints |= RigidbodyConstraints2D.FreezeRotation;
+
+                    grabObj.GetComponent<BoxCollider2D>().enabled = false;
                     grabObj.transform.position = grabPoint.position;
                     grabObj.transform.SetParent(transform);
 
@@ -79,6 +84,9 @@ public class PlayerActionToPresentBox : MonoBehaviour
             {
                 //“Š‚°‚é
                 grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
+                // ‘S‚Ä‚Ì§–ñ‚ğ‰ğœ‚·‚é
+                grabObj.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                grabObj.GetComponent<BoxCollider2D>().enabled = true;
                 grabObj.transform.SetParent(null);
                 Rigidbody2D rb = grabObj.GetComponent<Rigidbody2D>();
 

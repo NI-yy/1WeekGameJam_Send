@@ -1,3 +1,4 @@
+using JetBrains.Rider.Unity.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,6 +10,7 @@ public class ParachuteGimicController : MonoBehaviour
     public bool movedFlag = false;
     [SerializeField] GameObject[] presents_in;
     [SerializeField] GameObject Wall_right;
+    [SerializeField] GameObject Wall_left;
 
     private int array_num;
     private int index = 0;
@@ -21,14 +23,19 @@ public class ParachuteGimicController : MonoBehaviour
     private string tag_1 = "PresentBox";
     private string tag_2 = "present_dummy";
 
+    [SerializeField] GameObject ColliderToDestory;
+    [SerializeField] GameObject Hukuro;
+
+    [SerializeField] float kikyu_speed;
+    private bool kikyu_flag = false;
+    
     // Start is called before the first frame update
     void Start()
     {
         initialPosition = transform.position;
         index = 0;
         array_num = presents_in.Length;
-        Debug.Log(presents_in[0]);
-        StartCoroutine(WaitForOneSecond());
+        StartCoroutine(WaitForOneSecondForFlag(5f));
         
     }
 
@@ -49,8 +56,14 @@ public class ParachuteGimicController : MonoBehaviour
             // 移動が完了したら終了
             if (t >= 1.0f && flag)
             {
+                movedFlag = false;
+                ColliderToDestory.GetComponent<ColliderToDestoryController>().is_flaying = false;
+                Hukuro.GetComponent<Animator>().enabled = true;
                 ActivateIneerPresent();
                 GetComponent<BoxCollider2D>().enabled = false;
+                StartCoroutine(WaitForOneSecondAfterMoved(1f));
+                
+                
             }
 
         }
@@ -59,10 +72,13 @@ public class ParachuteGimicController : MonoBehaviour
     void ActivateIneerPresent()
     {
         Wall_right.SetActive(false);
+        Wall_left.SetActive(false);
         for (int i = 0; i < index; i++)
         {
-            Debug.Log((presents_in[i], i));
             presents_in[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            Color currentColor = presents_in[i].GetComponent<SpriteRenderer>().color;
+            currentColor.a = 1.0f; // 0から1の範囲で指定するために変換（255で割る）
+            presents_in[i].GetComponent<SpriteRenderer>().color = currentColor; // 設定した色情報を適用
             presents_in[i].tag = tag_1;
         }
 
@@ -80,9 +96,26 @@ public class ParachuteGimicController : MonoBehaviour
     }
 
 
-    IEnumerator WaitForOneSecond()
+    IEnumerator WaitForOneSecondForFlag(float time)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(time);
         movedFlag = true;
+    }
+
+    IEnumerator WaitForOneSecondAfterMoved(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Hukuro.SetActive(false);
+        kikyu_flag = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (kikyu_flag)
+        {
+            Vector2 movement = Vector2.up * kikyu_speed * Time.fixedDeltaTime;
+            GetComponent<Rigidbody2D>().MovePosition(GetComponent<Rigidbody2D>().position + movement);
+        }
+        
     }
 }
