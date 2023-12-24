@@ -10,6 +10,9 @@ public class PlayerController_yy : MonoBehaviour
     [SerializeField, HideInInspector] SpriteRenderer spriteRenderer;
     [SerializeField, HideInInspector] Animator animator;
     [SerializeField] float characterHeightOffset;
+    [SerializeField] ParticleSystem jumpParticleSystem;
+    [SerializeField] ParticleSystem landingParticleSystem;
+    [SerializeField] private Transform footPoint;
 
     [SerializeField] float test;
 
@@ -40,6 +43,7 @@ public class PlayerController_yy : MonoBehaviour
         {
             animator.SetBool("jump", true);
             velocity.y = 5;
+            Instantiate(jumpParticleSystem, footPoint.position, Quaternion.identity);
         }
         if (axis != 0)
         {
@@ -53,16 +57,17 @@ public class PlayerController_yy : MonoBehaviour
         }
         rig2d.velocity = velocity;
 
-        
+
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //6 = Ground
-        if(collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6)
         {
             animator.SetBool("jump", false);
+            Instantiate(landingParticleSystem, footPoint.position, Quaternion.identity);
         }
     }
 

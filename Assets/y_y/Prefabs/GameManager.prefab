@@ -3606,6 +3606,7 @@ MonoBehaviour:
   ClearUIManager: {fileID: 4311185354924769550}
   StageNumManager: {fileID: 3566595358365491780}
   PoseUIManager: {fileID: 8448071518227828090}
+  GoaledParticleSystem: {fileID: 2265393793282491180, guid: a03b1339fe044d945850c291af83a48e, type: 3}
 --- !u!1 &4403954035252017867
 GameObject:
   m_ObjectHideFlags: 0

@@ -2422,6 +2422,37 @@ Transform:
   m_Father: {fileID: 1688765695}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &788098585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 788098586}
+  m_Layer: 0
+  m_Name: FootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &788098586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788098585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: -0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4185655919327272261}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862278115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,6 +3295,7 @@ MonoBehaviour:
   Y_kickAmount: 3
   meter: {fileID: 69831094}
   forceAmount: 1
+  KickedParticleSystem: {fileID: 0}
   initDegree: 0
 --- !u!1001 &1779962548
 PrefabInstance:
@@ -8960,6 +8992,10 @@ PrefabInstance:
       propertyPath: meter
       value: 
       objectReference: {fileID: 69831094}
+    - target: {fileID: 3999880741244255439, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: KickedParticleSystem
+      value: 
+      objectReference: {fileID: 8745871121218208058, guid: 45f5f1394720bc248b633ed25f88157c, type: 3}
     - target: {fileID: 5208098378013319851, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9004,8 +9040,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: footPoint
+      value: 
+      objectReference: {fileID: 788098586}
+    - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: jumpParticleSystem
+      value: 
+      objectReference: {fileID: 8433393810423244852, guid: 321e210ce0114a140aa82d8e7284f2ad, type: 3}
+    - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: landingParticleSystem
+      value: 
+      objectReference: {fileID: 4846072123755138826, guid: 33d89ed71b145d144896da4093cb4dc2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5208098378013319851, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788098586}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}

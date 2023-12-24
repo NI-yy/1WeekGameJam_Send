@@ -70,6 +70,7 @@ Transform:
   - {fileID: 6203780441960910093}
   - {fileID: 2435961151569227549}
   - {fileID: 2743327180068223106}
+  - {fileID: 8694476689751855781}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -181,6 +182,7 @@ MonoBehaviour:
   Y_kickAmount: 200
   meter: {fileID: 0}
   forceAmount: 100
+  KickedParticleSystem: {fileID: 8745871121218208058, guid: 45f5f1394720bc248b633ed25f88157c, type: 3}
   initDegree: 0
 --- !u!114 &9115169335836094567
 MonoBehaviour:
@@ -201,6 +203,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   animator: {fileID: 0}
   characterHeightOffset: 0.4
+  jumpParticleSystem: {fileID: 8433393810423244852, guid: 321e210ce0114a140aa82d8e7284f2ad, type: 3}
+  landingParticleSystem: {fileID: 4846072123755138826, guid: 33d89ed71b145d144896da4093cb4dc2, type: 3}
+  footPoint: {fileID: 8694476689751855781}
   test: 1
   havingBox: 0
 --- !u!58 &2469981742794498181
@@ -310,6 +315,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &6028568636444361341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8694476689751855781}
+  m_Layer: 0
+  m_Name: FootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8694476689751855781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028568636444361341}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04, y: -0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5208098378013319851}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6980009574603536249
 GameObject:
   m_ObjectHideFlags: 0
