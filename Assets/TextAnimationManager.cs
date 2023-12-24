@@ -16,12 +16,12 @@ public class TextAnimationManager : MonoBehaviour
 
         if(Score != null)
         {
-            Score.progress += Time.unscaledDeltaTime / 2;
+            Score.progress += Time.unscaledDeltaTime / 1.5f;
         }
         
 
         delay += Time.unscaledDeltaTime;
-        if (delay > 2)
+        if (delay > 1.2)
         {
             if (Score_text != null)
             {
