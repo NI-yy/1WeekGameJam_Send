@@ -20,20 +20,11 @@ public class PlayerActionToPresentBox : MonoBehaviour
     [SerializeField] float X_kickAmount = 1f;
     [SerializeField] float Y_kickAmount = 1f;
 
-    [SerializeField] GameObject meter;
     [SerializeField] float forceAmount = 1f;
 
     MoveCharacterAction _moveCharacterAction;
 
     [SerializeField] ParticleSystem KickedParticleSystem;
-
-    //private bool meter_isOn = false;
-
-    private bool changeRotate;
-    private float rotate;
-    private float angle;
-    private float currentDegree;
-    [SerializeField] float initDegree = 0f;
 
     PlayerController_yy _playerController_yy;
 
@@ -123,49 +114,52 @@ public class PlayerActionToPresentBox : MonoBehaviour
         else
         {
             _playerController_yy.ThrowBoxAnimFalse();
+            _playerController_yy.HaveBoxAnimFalse();
+            
+        }
 
-            if (isRight())
-            {
-                hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPoint.localPosition, rayRadius, transform.right, rayDistance);
-            }
-            else
-            {
-                hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
-            }
+        if (isRight())
+        {
+            hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPoint.localPosition, rayRadius, transform.right, rayDistance);
+        }
+        else
+        {
+            hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
+        }
 
-            if (hit.collider != null && hit.collider.gameObject.tag == "PresentBox")
+        if (hit.collider != null && hit.collider.gameObject.tag == "PresentBox")
+        {
+            if (!(kickFlag))
             {
-                if (!(kickFlag))
+                //蹴る
+                float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
+                Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+                //エフェクト
+                Instantiate(KickedParticleSystem, hit.point, Quaternion.identity);
+                //効果音
+                _audioSource.PlayOneShot(kickSE);
+
+                if (diff > 0 && isRight())
                 {
-                    //蹴る
-                    float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
-                    Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
-                    //エフェクト
-                    Instantiate(KickedParticleSystem, hit.point, Quaternion.identity);
-                    //効果音
-                    _audioSource.PlayOneShot(kickSE);
-
-                    if (diff > 0 && isRight())
-                    {
-                        rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
-                        //rb.velocity = new Vector2(1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
-                    }
-                    else if (diff < 0 && !(isRight()))
-                    {
-                        rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
-                        //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
-                    }
-
-                    _playerController_yy.KickAnim();
-                    kickFlag = true;
+                    rb.AddForce(new Vector2(1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
+                    //rb.velocity = new Vector2(1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
                 }
-                
+                else if (diff < 0 && !(isRight()))
+                {
+                    rb.AddForce(new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount), ForceMode2D.Force);
+                    //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
+                }
+
+                Debug.Log("kick");
+                _playerController_yy.KickAnim();
+                kickFlag = true;
             }
-            else
-            {
-                kickFlag = false;
-                _playerController_yy.KickAnimFalse();
-            }
+
+        }
+        else
+        {
+            kickFlag = false;
+            _playerController_yy.KickAnimFalse();
         }
     }
 
@@ -189,48 +183,5 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
         Gizmos.DrawWireSphere(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius);
         Gizmos.DrawWireSphere(this.gameObject.transform.position + rayPointForLeft.localPosition - transform.right * rayDistance, rayRadius);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
-    void MoveMeter()
-    {
-        //角度が0.1度以下になるとtureになる。0度は360度
-        if (0.1f >= meter.transform.eulerAngles.z)
-        {
-            changeRotate = true;
-        }
-        //90度以上になるとfalseに切り替わる
-        if (90 <= meter.transform.eulerAngles.z)
-        {
-            changeRotate = false;
-        }
-
-        //trueなら角度を1足す、falseなら-1足す
-        if (changeRotate)
-        {
-            rotate = 1;
-        }
-        else
-        {
-            rotate = -1;
-        }
-
-        currentDegree += rotate;
-
-
-        if (isRight())
-        {
-            meter.transform.localEulerAngles = new Vector3(0f, 0f, currentDegree);
-            //Debug.Log((currentDegree, currentDegree + 90f));
-        }
-        else
-        {
-            meter.transform.localEulerAngles = new Vector3(0f, 0f, currentDegree + 90f);
-            //Debug.Log((currentDegree, currentDegree + 90f));
-        }
     }
 }

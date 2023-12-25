@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class CrackWallController : MonoBehaviour
 {
+    [SerializeField] GameObject presentBox;
+    [SerializeField] ParticleSystem kirakiraEffect;
+    public bool generatePresent = false;
     // Start is called before the first frame update
     void Start()
     {
+        if (generatePresent)
+        {
+            Instantiate(kirakiraEffect, transform.position, Quaternion.identity, this.transform);
+        }
         
     }
 
@@ -20,6 +27,14 @@ public class CrackWallController : MonoBehaviour
     {
         if(collision.gameObject.tag == "PresentBox")
         {
+            if (generatePresent)
+            {
+                Instantiate(presentBox, transform.position, Quaternion.identity);
+                Instantiate(presentBox, transform.position, Quaternion.identity);
+                Instantiate(presentBox, transform.position, Quaternion.identity);
+            }
+            
+
             Destroy(this.gameObject);
         }
     }

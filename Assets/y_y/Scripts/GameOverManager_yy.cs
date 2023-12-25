@@ -9,11 +9,13 @@ public class GameOverManager_yy : MonoBehaviour
     [SerializeField] GameObject GameOverCanvas;
     [SerializeField] GameObject PoseUIManager;
     [SerializeField] GameObject ClearUIManager;
+    private ClearUIManager_yy _clearUIManager;
     int currentSceneIndex;
 
     private void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        _clearUIManager = ClearUIManager.GetComponent<ClearUIManager_yy>();
     }
 
     public void ActivateGameOverUI()
@@ -27,18 +29,21 @@ public class GameOverManager_yy : MonoBehaviour
     {
         //ClearUIManager.GetComponent<ClearUIManager_yy>().ResetScoreText();
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentSceneIndex);
+        //SceneManager.LoadScene(currentSceneIndex);
+        _clearUIManager.ClickRetryButton();
     }
 
     public void ClickStageSelectButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("StageSelectScene_yy");
+        //SceneManager.LoadScene("StageSelectScene_yy");
+        _clearUIManager.ClickStageSelectButton();
     }
 
     public void ClickTitleButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("TitleScene_yy");
+        //SceneManager.LoadScene("TitleScene_yy");
+        _clearUIManager.ClickTitleButton();
     }
 }

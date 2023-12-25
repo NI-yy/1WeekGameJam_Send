@@ -16,9 +16,12 @@ public class SceneTransition : MonoBehaviour
 
 
     [HideInInspector] public int transitionLevel;
+    [HideInInspector] public string transitionSceneName;
     public bool sceneTransitionFlag = false;
     private float sceneTransitionTime = 0;
     private int lastStartedTransitionObjectIndex = -1;
+
+    private bool toStage;
 
     [Serializable]
     public class SceneTransitionObject
@@ -41,7 +44,15 @@ public class SceneTransition : MonoBehaviour
             }
             if(timeUpToSceneTransition < sceneTransitionTime)
             {
-                SceneManager.LoadScene("Stage" + transitionLevel.ToString());
+                if (toStage)
+                {
+                    SceneManager.LoadScene("Stage" + transitionLevel.ToString());
+                }
+                else
+                {
+                    SceneManager.LoadScene(transitionSceneName);
+                }
+                
             }
         }
     }
@@ -50,5 +61,13 @@ public class SceneTransition : MonoBehaviour
     {
         transitionLevel = level;
         sceneTransitionFlag = true;
+        toStage = true;
+    }
+
+    public void SceneTransStartNoStage(string name)
+    {
+        transitionSceneName = name;
+        sceneTransitionFlag = true;
+        toStage = false;
     }
 }

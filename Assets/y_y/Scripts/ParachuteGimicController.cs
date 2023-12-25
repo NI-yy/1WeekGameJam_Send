@@ -9,8 +9,6 @@ public class ParachuteGimicController : MonoBehaviour
     [SerializeField] Vector2 targetPos;
     public bool movedFlag = false;
     [SerializeField] GameObject[] presents_in;
-    [SerializeField] GameObject Wall_right;
-    [SerializeField] GameObject Wall_left;
 
     private int array_num;
     private int index = 0;
@@ -23,7 +21,6 @@ public class ParachuteGimicController : MonoBehaviour
     private string tag_1 = "PresentBox";
     private string tag_2 = "present_dummy";
 
-    [SerializeField] GameObject ColliderToDestory;
     [SerializeField] GameObject Hukuro;
 
     [SerializeField] float kikyu_speed;
@@ -57,7 +54,6 @@ public class ParachuteGimicController : MonoBehaviour
             if (t >= 1.0f && flag)
             {
                 movedFlag = false;
-                ColliderToDestory.GetComponent<ColliderToDestoryController>().is_flaying = false;
                 Hukuro.GetComponent<Animator>().enabled = true;
                 ActivateIneerPresent();
                 GetComponent<BoxCollider2D>().enabled = false;
@@ -71,11 +67,11 @@ public class ParachuteGimicController : MonoBehaviour
 
     void ActivateIneerPresent()
     {
-        Wall_right.SetActive(false);
-        Wall_left.SetActive(false);
         for (int i = 0; i < index; i++)
         {
-            presents_in[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            //presents_in[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            presents_in[i].GetComponent<Rigidbody2D>().simulated = true;
+            presents_in[i].GetComponent<BoxCollider2D>().enabled = true;
             Color currentColor = presents_in[i].GetComponent<SpriteRenderer>().color;
             currentColor.a = 1.0f; // 0から1の範囲で指定するために変換（255で割る）
             presents_in[i].GetComponent<SpriteRenderer>().color = currentColor; // 設定した色情報を適用

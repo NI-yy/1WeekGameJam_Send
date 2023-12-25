@@ -181,11 +181,10 @@ MonoBehaviour:
   Y_throwAmount: 3
   X_kickAmount: 250
   Y_kickAmount: 200
-  meter: {fileID: 0}
   forceAmount: 100
   KickedParticleSystem: {fileID: 8745871121218208058, guid: 45f5f1394720bc248b633ed25f88157c, type: 3}
-  initDegree: 0
   kickSE: {fileID: 8300000, guid: 7ed21516d36c88e4f850af05163999ac, type: 3}
+  throwSE: {fileID: 8300000, guid: 0afddb07a8e8eb74896363d1b79e4845, type: 3}
 --- !u!114 &9115169335836094567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,8 +207,11 @@ MonoBehaviour:
   jumpParticleSystem: {fileID: 8433393810423244852, guid: 321e210ce0114a140aa82d8e7284f2ad, type: 3}
   landingParticleSystem: {fileID: 4846072123755138826, guid: 33d89ed71b145d144896da4093cb4dc2, type: 3}
   footPoint: {fileID: 8694476689751855781}
-  test: 1
+  jumpSE: {fileID: 8300000, guid: 4a49265eb61c31b41ba1c9b369e37499, type: 3}
+  landingSE: {fileID: 8300000, guid: 8600281d1a01c2c49b1a444d27c7aa2f, type: 3}
   havingBox: 0
+  rayLength: 0.35
+  dash: 4
 --- !u!58 &2469981742794498181
 CircleCollider2D:
   m_ObjectHideFlags: 0
