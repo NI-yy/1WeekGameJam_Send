@@ -2395,6 +2395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Transition Images Out
       objectReference: {fileID: 0}
+    - target: {fileID: 2130346776042062995, guid: b1bd3f1c128cac4439a9ba2888b9a66f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6571778097125476591, guid: b1bd3f1c128cac4439a9ba2888b9a66f, type: 3}
       propertyPath: m_Pivot.x
       value: 0

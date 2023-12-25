@@ -27,7 +27,7 @@ public class ClearUIManager_yy : MonoBehaviour
     {
         Time.timeScale = 0;
         ClearCanvas.SetActive(true);
-        Clear_text_score.text += score.ToString("F2");
+        Clear_text_score.text += score.ToString("F0");
 
         if (is_final)
         {
