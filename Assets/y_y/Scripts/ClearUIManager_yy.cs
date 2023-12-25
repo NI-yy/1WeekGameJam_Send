@@ -38,6 +38,8 @@ public class ClearUIManager_yy : MonoBehaviour
     public void ClickNextButton()
     {
         Time.timeScale = 1;
+        ButtonSEManager_yy seManager = ButtonSEManager_yy.Instance;
+        seManager.SettingPlaySE();
         // SceneManager.LoadScene(currentSceneIndex + 1);
         SceneTransitionStart("Stage" + (currentGameStageNum + 1).ToString());
     }
@@ -45,6 +47,8 @@ public class ClearUIManager_yy : MonoBehaviour
     public void ClickRetryButton()
     {
         Time.timeScale = 1;
+        ButtonSEManager_yy seManager = ButtonSEManager_yy.Instance;
+        seManager.SettingPlaySE();
         // SceneManager.LoadScene(currentSceneIndex);
         SceneTransitionStart("Stage" + currentGameStageNum.ToString());
     }
@@ -52,6 +56,8 @@ public class ClearUIManager_yy : MonoBehaviour
     public void ClickStageSelectButton()
     {
         Time.timeScale = 1;
+        ButtonSEManager_yy seManager = ButtonSEManager_yy.Instance;
+        seManager.SettingPlaySE();
         // SceneManager.LoadScene("LevelSelect");
         SceneTransitionStart("LevelSelect");
     }
@@ -59,6 +65,8 @@ public class ClearUIManager_yy : MonoBehaviour
     public void ClickTitleButton()
     {
         Time.timeScale = 1;
+        ButtonSEManager_yy seManager = ButtonSEManager_yy.Instance;
+        seManager.SettingPlaySE();
         // SceneManager.LoadScene("TitleScene_yy");
         SceneTransitionStart("TitleScene_yy");
     }
