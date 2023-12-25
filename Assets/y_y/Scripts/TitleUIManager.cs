@@ -7,6 +7,20 @@ public class TitleUIManager : MonoBehaviour
 {
 
     public GameObject sceneTransitionImagesIn;
+    public GameObject sceneTransitionImagesOut;
+    public static bool initFlag = false;
+
+    private void Start()
+    {
+        if (initFlag)
+        {
+            sceneTransitionImagesOut.SetActive(true);
+        }
+        else
+        {
+            initFlag = false;
+        }
+    }
 
     public void ClickStageSelectButton()
     {
