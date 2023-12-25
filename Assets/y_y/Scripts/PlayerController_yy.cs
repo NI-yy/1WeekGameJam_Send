@@ -13,14 +13,16 @@ public class PlayerController_yy : MonoBehaviour
     [SerializeField] ParticleSystem jumpParticleSystem;
     [SerializeField] ParticleSystem landingParticleSystem;
     [SerializeField] private Transform footPoint;
-
-    [SerializeField] float test;
     [SerializeField] AudioClip jumpSE;
     [SerializeField] AudioClip landingSE;
 
     private AudioSource _audioSource;
 
     public bool havingBox;
+    [SerializeField] float rayLength = 1f;
+    private bool midAir = false;
+
+    [SerializeField] float dash = 1f;
 
     private void Awake()
     {
@@ -52,11 +54,13 @@ public class PlayerController_yy : MonoBehaviour
             _audioSource.PlayOneShot(jumpSE);
 
         }
+
         if (axis != 0)
         {
             animator.SetBool("run", true);
             spriteRenderer.flipX = axis < 0;
             velocity.x = axis * 2;
+            
         }
         else
         {
@@ -65,7 +69,25 @@ public class PlayerController_yy : MonoBehaviour
         rig2d.velocity = velocity;
 
 
+        //着地判定のためのraycast
+        var hit = Physics2D.Raycast(transform.position, Vector3.down, rayLength, groundMask);
+        if(hit.collider == null)
+        {
+            if (midAir)
+            {
+                animator.SetBool("jump", true);
+            }
+            midAir = true;
+        }
+        else
+        {
+            if (midAir)
+            {
+                _audioSource.PlayOneShot(landingSE);
+            }
 
+            midAir = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -74,8 +96,9 @@ public class PlayerController_yy : MonoBehaviour
         if (collision.gameObject.layer == 6)
         {
             animator.SetBool("jump", false);
+            //着地以外でもエフェクトが出てしまうが、走ってる感じがあってむしろ良いので残す
             Instantiate(landingParticleSystem, footPoint.position, Quaternion.identity);
-            _audioSource.PlayOneShot(landingSE);
+            //_audioSource.PlayOneShot(landingSE);
         }
     }
 
@@ -95,6 +118,11 @@ public class PlayerController_yy : MonoBehaviour
         animator.SetBool("throw", false);
     }
 
+    public void HaveBoxAnimFalse()
+    {
+        animator.SetBool("havebox", false);
+    }
+
     public void KickAnim()
     {
         animator.SetBool("kick", true);
@@ -103,5 +131,11 @@ public class PlayerController_yy : MonoBehaviour
     public void KickAnimFalse()
     {
         animator.SetBool("kick", false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position, Vector3.down * rayLength);
     }
 }

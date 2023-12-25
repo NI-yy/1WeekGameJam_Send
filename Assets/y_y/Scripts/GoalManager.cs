@@ -13,8 +13,11 @@ public class GoalManager : MonoBehaviour
     [SerializeField] StageNumManager StageNumManager;
     [SerializeField] GameObject PoseUIManager;
     [SerializeField] ParticleSystem GoaledParticleSystem;
+    [SerializeField] AudioClip itemInSE;
+    [SerializeField] AudioClip playerInSE;
 
     private ScoreManager _scoreManager;
+    private AudioSource _audioSource;
     float total_score = 0f;
     private bool is_over = false;
 
@@ -24,6 +27,7 @@ public class GoalManager : MonoBehaviour
         Debug.Log("ResetScore");
         total_score = 0f;
         _scoreManager = ScoreManager.GetComponent<ScoreManager>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,10 +43,11 @@ public class GoalManager : MonoBehaviour
         {
             if (!(is_over))
             {
+                _audioSource.PlayOneShot(playerInSE);
+
                 Destroy(obj);
                 PoseUIManager.GetComponent<PoseUIManager>().is_over = true;
                 total_score = _scoreManager.CalScore();
-                Debug.Log(("Goal", total_score, this.gameObject));
                 SaveManager.SaveAndSendScoreOnStage(StageNumManager.current_stage_num, (int)total_score);
                 ClearUIManager.GetComponent<ClearUIManager_yy>().ActivateClearUI(total_score);
 
@@ -52,12 +57,16 @@ public class GoalManager : MonoBehaviour
         }
         else if (obj.tag == "PresentBox")
         {
+            _audioSource.PlayOneShot(itemInSE);
+
             Destroy(obj);
             Instantiate(GoaledParticleSystem, transform.position, Quaternion.identity);
             _scoreManager.AddScore(10f);
         }
         else if (obj.tag == "BigPresentBox")
         {
+            _audioSource.PlayOneShot(itemInSE);
+
             Destroy(obj);
             Instantiate(GoaledParticleSystem, transform.position, Quaternion.identity);
             _scoreManager.AddScore(50f);
