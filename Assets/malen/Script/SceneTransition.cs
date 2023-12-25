@@ -14,11 +14,11 @@ public class SceneTransition : MonoBehaviour
     public float sceneTransitionSpeed;
     public float timeUpToSceneTransition;
 
-
-    [HideInInspector] public int transitionLevel;
     public bool sceneTransitionFlag = false;
+    private int transitionLevel;
     private float sceneTransitionTime = 0;
     private int lastStartedTransitionObjectIndex = -1;
+    private string transitionSceneName;
 
     [Serializable]
     public class SceneTransitionObject
@@ -41,14 +41,14 @@ public class SceneTransition : MonoBehaviour
             }
             if(timeUpToSceneTransition < sceneTransitionTime)
             {
-                SceneManager.LoadScene("Stage" + transitionLevel.ToString());
+                SceneManager.LoadScene(transitionSceneName);
             }
         }
     }
 
-    public void SceneTransitionStart(int level)
+    public void SceneTransitionStart(string sceneName)
     {
-        transitionLevel = level;
+        transitionSceneName = sceneName;
         sceneTransitionFlag = true;
     }
 }
