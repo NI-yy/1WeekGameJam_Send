@@ -15,6 +15,10 @@ public class PlayerController_yy : MonoBehaviour
     [SerializeField] private Transform footPoint;
 
     [SerializeField] float test;
+    [SerializeField] AudioClip jumpSE;
+    [SerializeField] AudioClip landingSE;
+
+    private AudioSource _audioSource;
 
     public bool havingBox;
 
@@ -23,6 +27,7 @@ public class PlayerController_yy : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rig2d = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -44,6 +49,8 @@ public class PlayerController_yy : MonoBehaviour
             animator.SetBool("jump", true);
             velocity.y = 5;
             Instantiate(jumpParticleSystem, footPoint.position, Quaternion.identity);
+            _audioSource.PlayOneShot(jumpSE);
+
         }
         if (axis != 0)
         {
@@ -68,6 +75,7 @@ public class PlayerController_yy : MonoBehaviour
         {
             animator.SetBool("jump", false);
             Instantiate(landingParticleSystem, footPoint.position, Quaternion.identity);
+            _audioSource.PlayOneShot(landingSE);
         }
     }
 

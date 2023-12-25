@@ -39,10 +39,15 @@ public class PlayerActionToPresentBox : MonoBehaviour
 
     private bool kickFlag = false;
 
+    [SerializeField] AudioClip kickSE;
+    [SerializeField] AudioClip throwSE;
+    private AudioSource _audioSource;
+
     private void Start()
     {
         _moveCharacterAction = GetComponent<MoveCharacterAction>();
         _playerController_yy = GetComponent<PlayerController_yy>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -110,6 +115,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
                 }
 
                 _playerController_yy.ThrowBoxAnim();
+                _audioSource.PlayOneShot(throwSE);
                 grabObj = null;
             }
             
@@ -136,6 +142,8 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
                     //エフェクト
                     Instantiate(KickedParticleSystem, hit.point, Quaternion.identity);
+                    //効果音
+                    _audioSource.PlayOneShot(kickSE);
 
                     if (diff > 0 && isRight())
                     {

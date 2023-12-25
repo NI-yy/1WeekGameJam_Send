@@ -3297,6 +3297,8 @@ MonoBehaviour:
   forceAmount: 1
   KickedParticleSystem: {fileID: 0}
   initDegree: 0
+  kickSE: {fileID: 0}
+  throwSE: {fileID: 0}
 --- !u!1001 &1779962548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8993,6 +8995,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 69831094}
     - target: {fileID: 3999880741244255439, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: jumpSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a49265eb61c31b41ba1c9b369e37499, type: 3}
+    - target: {fileID: 3999880741244255439, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: throwSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 0afddb07a8e8eb74896363d1b79e4845, type: 3}
+    - target: {fileID: 3999880741244255439, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: landingSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 8600281d1a01c2c49b1a444d27c7aa2f, type: 3}
+    - target: {fileID: 3999880741244255439, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: KickedParticleSystem
       value: 
       objectReference: {fileID: 8745871121218208058, guid: 45f5f1394720bc248b633ed25f88157c, type: 3}
@@ -9041,9 +9055,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: jumpSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a49265eb61c31b41ba1c9b369e37499, type: 3}
+    - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: footPoint
       value: 
       objectReference: {fileID: 788098586}
+    - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: landingSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 8600281d1a01c2c49b1a444d27c7aa2f, type: 3}
     - target: {fileID: 9115169335836094567, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: jumpParticleSystem
       value: 
