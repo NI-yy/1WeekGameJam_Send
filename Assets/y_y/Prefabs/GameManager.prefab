@@ -888,7 +888,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8615409426950521582}
+  - {fileID: 7733449598096449335}
   m_Father: {fileID: 823544184013913019}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3561,7 +3561,7 @@ MonoBehaviour:
   Clear_text_score: {fileID: 3874344758756102812}
   ClearUI_NextButton: {fileID: 913392706828002837}
   GameManager: {fileID: 7758618820298363359}
-  SceneTransitionManager: {fileID: 649250126810335948}
+  SceneTransitionImagesIn: {fileID: 7145603112933359873}
   is_final: 0
 --- !u!1 &4371601244590695824
 GameObject:
@@ -7109,13 +7109,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56c76ff09ddccad4b820c41118700aaf, type: 3}
---- !u!1 &649250126810335948 stripped
+--- !u!1 &7145603112933359873 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4901986933271863179, guid: 56c76ff09ddccad4b820c41118700aaf, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3328030949827892294, guid: 56c76ff09ddccad4b820c41118700aaf, type: 3}
   m_PrefabInstance: {fileID: 5550056143447840071}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &8615409426950521582 stripped
+--- !u!224 &7733449598096449335 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4221517247901783977, guid: 56c76ff09ddccad4b820c41118700aaf, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2762810794826779248, guid: 56c76ff09ddccad4b820c41118700aaf, type: 3}
   m_PrefabInstance: {fileID: 5550056143447840071}
   m_PrefabAsset: {fileID: 0}

@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BGMManager_yy : MonoBehaviour
 {
     private string[] temp = { "Stage1", "Stage2", "Stage3", "Stage4", "Stage5", "Stage6", "Stage7", "Stage8", "Stage9" };
     List<string> stageSceneNames = new List<string>();
+    Slider volumeSlider;
+    private bool slider_exist = false;
 
     //シングルトン設定ここから
     static public BGMManager_yy instance;
@@ -46,15 +49,50 @@ public class BGMManager_yy : MonoBehaviour
         {
             stageSceneNames.Add(temp[i]);
         }
+
+        GameObject obj = GameObject.Find("ParentSettingCanvas");
+        if(obj != null)
+        {
+            GameObject obj_slider = obj.transform.Find("SettingCanvas/VolumeSlider").gameObject;
+            Debug.Log(obj_slider);
+            slider_exist = true;
+            volumeSlider = obj_slider.GetComponent<Slider>();
+        }
+        else
+        {
+            slider_exist = false;
+        }
     }
 
+    private void Update()
+    {
+        if (slider_exist)
+        {
+            TitleStageSelect_BGM.volume = volumeSlider.value;
+            StageBGM.volume = volumeSlider.value / 2;
+        }
+        
+    }
 
 
 
     //シーンが切り替わった時に呼ばれるメソッド　
     void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
     {
-        Debug.Log((beforeScene, nextScene.name));
+        GameObject obj = GameObject.Find("ParentSettingCanvas");
+        if (obj != null)
+        {
+            GameObject obj_slider = obj.transform.Find("SettingCanvas/VolumeSlider").gameObject;
+            Debug.Log(obj_slider);
+            slider_exist = true;
+            volumeSlider = obj_slider.GetComponent<Slider>();
+        }
+        else
+        {
+            slider_exist = false;
+        }
+
+
         //シーンがどう変わったかで判定
         //Scene1からScene2へ
         if (beforeScene == "LevelSelect" && stageSceneNames.Contains(nextScene.name))
@@ -85,6 +123,6 @@ public class BGMManager_yy : MonoBehaviour
     {
         // 音楽の音量をスライドバーの値に変更
         TitleStageSelect_BGM.volume = newSliderValue;
-        StageBGM.volume = newSliderValue;
+        StageBGM.volume = newSliderValue / 2;
     }
 }
