@@ -42,8 +42,12 @@ public class SelectLevelCuror_yy : MonoBehaviour
             
             if (cursor < select.Length - 1)
             {
-                cursor++;
-                CursorUpdate();
+                if (select[cursor + 1].activeSelf)
+                {
+                    cursor++;
+                    CursorUpdate();
+                }
+                
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -72,15 +76,20 @@ public class SelectLevelCuror_yy : MonoBehaviour
 
     private void CursorUpdate()
     {
-        select[cursor].GetComponent<SelectLevel>().CharacterMove();
-        select[cursor].GetComponent<SelectLevel>().StartAnimation();
-
-        if (!(is_init))
+        Debug.Log((cursor_prev, cursor));
+        if (select[cursor].activeSelf)
         {
-            if(cursor != cursor_prev)
+            select[cursor].GetComponent<SelectLevel>().CharacterMove();
+            select[cursor].GetComponent<SelectLevel>().StartAnimation();
+
+            if (!(is_init))
             {
-                select[cursor_prev].GetComponent<SelectLevel>().StopAnimation();
+                if (cursor != cursor_prev)
+                {
+                    select[cursor_prev].GetComponent<SelectLevel>().StopAnimation();
+                }
             }
         }
+        
     }
 }

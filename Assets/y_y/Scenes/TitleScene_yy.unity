@@ -1169,7 +1169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -175, y: -1155}
   m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399951651
@@ -1461,6 +1461,7 @@ MonoBehaviour:
   Clear_text: {fileID: 287744230}
   Score: {fileID: 0}
   Score_text: {fileID: 0}
+  Thanks_text: {fileID: 0}
 --- !u!1 &674057540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2372,7 @@ MonoBehaviour:
   Clear_text: {fileID: 47965501}
   Score: {fileID: 0}
   Score_text: {fileID: 0}
+  Thanks_text: {fileID: 0}
 --- !u!1 &1039993821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,7 +2541,7 @@ Canvas:
   m_GameObject: {fileID: 1130059078}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

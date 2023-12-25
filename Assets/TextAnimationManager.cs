@@ -7,6 +7,7 @@ public class TextAnimationManager : MonoBehaviour
     [SerializeField] TextMeshProGeometryAnimator Clear_text;
     [SerializeField] TextMeshProGeometryAnimator Score;
     [SerializeField] TextMeshProGeometryAnimator Score_text;
+    [SerializeField] TextMeshProGeometryAnimator Thanks_text;
     float delay = 0;
 
     void Update()
@@ -17,6 +18,11 @@ public class TextAnimationManager : MonoBehaviour
         if(Score != null)
         {
             Score.progress += Time.unscaledDeltaTime / 1.5f;
+        }
+
+        if(Thanks_text != null)
+        {
+            Thanks_text.progress += Time.unscaledDeltaTime / 1.5f;
         }
         
 

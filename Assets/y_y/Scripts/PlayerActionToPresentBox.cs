@@ -127,10 +127,12 @@ public class PlayerActionToPresentBox : MonoBehaviour
             hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
         }
 
+        Debug.Log(hit.collider.gameObject);
         if (hit.collider != null && hit.collider.gameObject.tag == "PresentBox")
         {
             if (!(kickFlag))
             {
+                
                 //èRÇÈ
                 float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
                 Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
@@ -150,7 +152,6 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
                 }
 
-                Debug.Log("kick");
                 _playerController_yy.KickAnim();
                 kickFlag = true;
             }

@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 219072677}
   - component: {fileID: 219072676}
   - component: {fileID: 219072675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
