@@ -21,7 +21,7 @@ public class TextAnimationManager : MonoBehaviour
         
 
         delay += Time.unscaledDeltaTime;
-        if (delay > 1.2)
+        if (delay > 0.5)
         {
             if (Score_text != null)
             {
