@@ -25,7 +25,8 @@ public class SelectLevel : MonoBehaviour
     public Sprite kickSprite;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI highScoreText;
-    public GameObject sceneTransitionImages;
+    public GameObject sceneTransitionImagesIn;
+    public GameObject stageTextObject;
     public Button[] allButtons;
 
     private Tween hoverTween;
@@ -68,6 +69,7 @@ public class SelectLevel : MonoBehaviour
         levelNumberTween = levelText.transform.DOScale(1.5f, 0.1f).SetLoops(2, LoopType.Yoyo);
         highScoreText.text = $"{SaveManager.GetScoreOnStage(level)}";
         highScoreTween = highScoreText.transform.DOScale(1.5f, 0.1f).SetLoops(2, LoopType.Yoyo);
+        stageTextObject.SetActive(true);
     }
 
     public void StopAnimation()
@@ -97,6 +99,6 @@ public class SelectLevel : MonoBehaviour
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(transform.position + moveTargetPoint, animationDuration).SetEase(Ease.Linear));
         sequence.Join(transform.DORotate(new Vector3(0, 0, 1800), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear));
-        sequence.OnComplete(() => sceneTransitionImages.GetComponent<SceneTransition>().SceneTransitionStart(level));
+        sequence.OnComplete(() => sceneTransitionImagesIn.GetComponent<SceneTransition>().SceneTransitionStart("Stage" + level.ToString()));
     }
 }

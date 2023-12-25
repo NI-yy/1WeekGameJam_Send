@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TitleUIManager : MonoBehaviour
 {
+
+    public GameObject sceneTransitionImagesIn;
+
     public void ClickStageSelectButton()
     {
-        SceneManager.LoadScene("LevelSelect");
+        sceneTransitionImagesIn.GetComponent<SceneTransition>().SceneTransitionStart("LevelSelect");
+        // SceneManager.LoadScene("LevelSelect");
     }
 }

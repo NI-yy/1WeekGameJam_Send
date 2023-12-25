@@ -10,6 +10,7 @@ public class ClearUIManager_yy : MonoBehaviour
     [SerializeField] TextMeshProUGUI Clear_text_score;
     [SerializeField] GameObject ClearUI_NextButton;
     [SerializeField] GameObject GameManager;
+    [SerializeField] GameObject SceneTransitionImagesIn;
     public bool is_final = false;
     int currentGameStageNum;
 
@@ -37,29 +38,40 @@ public class ClearUIManager_yy : MonoBehaviour
     public void ClickNextButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        // SceneManager.LoadScene(currentSceneIndex + 1);
+        SceneTransitionStart("Stage" + (currentGameStageNum + 1).ToString());
     }
 
     public void ClickRetryButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentSceneIndex);
+        // SceneManager.LoadScene(currentSceneIndex);
+        SceneTransitionStart("Stage" + currentGameStageNum.ToString());
     }
 
     public void ClickStageSelectButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("LevelSelect");
+        // SceneManager.LoadScene("LevelSelect");
+        SceneTransitionStart("LevelSelect");
     }
 
     public void ClickTitleButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("TitleScene_yy");
+        // SceneManager.LoadScene("TitleScene_yy");
+        SceneTransitionStart("TitleScene_yy");
     }
 
     public void ResetScoreText()
     {
         Clear_text_score.text = "Stage01\nScore: ";
+    }
+
+    private void SceneTransitionStart(string sceneName)
+    {
+        SceneTransitionImagesIn.SetActive(true);
+        SceneTransition sceneTransition = SceneTransitionImagesIn.GetComponent<SceneTransition>();
+        sceneTransition.SceneTransitionStart(sceneName);
     }
 }
