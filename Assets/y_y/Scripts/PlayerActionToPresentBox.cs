@@ -127,7 +127,6 @@ public class PlayerActionToPresentBox : MonoBehaviour
             hit = Physics2D.CircleCast(this.gameObject.transform.position + rayPointForLeft.localPosition, rayRadius, -transform.right, rayDistance);
         }
 
-        Debug.Log(hit.collider.gameObject);
         if (hit.collider != null && hit.collider.gameObject.tag == "PresentBox")
         {
             if (!(kickFlag))
