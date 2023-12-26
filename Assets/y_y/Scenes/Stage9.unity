@@ -44715,6 +44715,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_AnimObj_yy
       objectReference: {fileID: 0}
+    - target: {fileID: 2668163149798636499, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668163149798636499, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5208098378013319851, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: m_RootOrder
       value: 2

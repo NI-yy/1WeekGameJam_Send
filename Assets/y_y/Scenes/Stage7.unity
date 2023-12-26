@@ -155,9 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &22830459
 Rigidbody2D:
   serializedVersion: 4
@@ -228,7 +225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &22830461
 SpriteRenderer:
@@ -454,7 +451,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &23127485
 MonoBehaviour:
@@ -468,9 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!1 &36589216
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,9 +497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &36589218
 Rigidbody2D:
   serializedVersion: 4
@@ -576,7 +567,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &36589220
 SpriteRenderer:
@@ -677,9 +668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &53988393
 Rigidbody2D:
   serializedVersion: 4
@@ -750,7 +738,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &53988395
 SpriteRenderer:
@@ -851,9 +839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &65097340
 Rigidbody2D:
   serializedVersion: 4
@@ -924,7 +909,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &65097342
 SpriteRenderer:
@@ -1086,9 +1071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &86949755
 Rigidbody2D:
   serializedVersion: 4
@@ -1159,7 +1141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &86949757
 SpriteRenderer:
@@ -1260,9 +1242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &97260701
 Rigidbody2D:
   serializedVersion: 4
@@ -1333,7 +1312,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &97260703
 SpriteRenderer:
@@ -1500,9 +1479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &196428596
 Rigidbody2D:
   serializedVersion: 4
@@ -1573,7 +1549,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &196428598
 SpriteRenderer:
@@ -1674,9 +1650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &205987181
 Rigidbody2D:
   serializedVersion: 4
@@ -1747,7 +1720,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &205987183
 SpriteRenderer:
@@ -1879,9 +1852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &293077258
 Rigidbody2D:
   serializedVersion: 4
@@ -1952,7 +1922,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &293077260
 SpriteRenderer:
@@ -2053,9 +2023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &330554736
 Rigidbody2D:
   serializedVersion: 4
@@ -2126,7 +2093,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &330554738
 SpriteRenderer:
@@ -2227,9 +2194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &338101469
 Rigidbody2D:
   serializedVersion: 4
@@ -2300,7 +2264,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &338101471
 SpriteRenderer:
@@ -2566,9 +2530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &351817777
 Rigidbody2D:
   serializedVersion: 4
@@ -2639,7 +2600,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &351817779
 SpriteRenderer:
@@ -2993,9 +2954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &429366611
 Rigidbody2D:
   serializedVersion: 4
@@ -3066,7 +3024,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &429366613
 SpriteRenderer:
@@ -3167,9 +3125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &430591120
 Rigidbody2D:
   serializedVersion: 4
@@ -3240,7 +3195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &430591122
 SpriteRenderer:
@@ -32706,9 +32661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &456393452
 Rigidbody2D:
   serializedVersion: 4
@@ -32779,7 +32731,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &456393454
 SpriteRenderer:
@@ -32880,9 +32832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &496164735
 Rigidbody2D:
   serializedVersion: 4
@@ -32953,7 +32902,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &496164737
 SpriteRenderer:
@@ -33054,9 +33003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &513552982
 Rigidbody2D:
   serializedVersion: 4
@@ -33127,7 +33073,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &513552984
 SpriteRenderer:
@@ -33294,9 +33240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &544827811
 Rigidbody2D:
   serializedVersion: 4
@@ -33367,7 +33310,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &544827813
 SpriteRenderer:
@@ -33468,9 +33411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &555648032
 Rigidbody2D:
   serializedVersion: 4
@@ -33541,7 +33481,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &555648034
 SpriteRenderer:
@@ -33724,9 +33664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &602417051
 Rigidbody2D:
   serializedVersion: 4
@@ -33797,7 +33734,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &602417053
 SpriteRenderer:
@@ -33964,9 +33901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &618705098
 Rigidbody2D:
   serializedVersion: 4
@@ -34037,7 +33971,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &618705100
 SpriteRenderer:
@@ -34138,9 +34072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &643285132
 Rigidbody2D:
   serializedVersion: 4
@@ -34211,7 +34142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &643285134
 SpriteRenderer:
@@ -34312,9 +34243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &740535970
 Rigidbody2D:
   serializedVersion: 4
@@ -34385,7 +34313,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &740535972
 SpriteRenderer:
@@ -34486,9 +34414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &787496499
 Rigidbody2D:
   serializedVersion: 4
@@ -34559,7 +34484,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &787496501
 SpriteRenderer:
@@ -34799,9 +34724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &846485794
 Rigidbody2D:
   serializedVersion: 4
@@ -34872,7 +34794,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &846485796
 SpriteRenderer:
@@ -34973,9 +34895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &846607500
 Rigidbody2D:
   serializedVersion: 4
@@ -35046,7 +34965,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &846607502
 SpriteRenderer:
@@ -35319,9 +35238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &929458780
 Rigidbody2D:
   serializedVersion: 4
@@ -35392,7 +35308,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &929458782
 SpriteRenderer:
@@ -35493,9 +35409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &931434490
 Rigidbody2D:
   serializedVersion: 4
@@ -35566,7 +35479,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &931434492
 SpriteRenderer:
@@ -35667,9 +35580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &959166376
 Rigidbody2D:
   serializedVersion: 4
@@ -35740,7 +35650,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &959166378
 SpriteRenderer:
@@ -35841,9 +35751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &964745188
 Rigidbody2D:
   serializedVersion: 4
@@ -35914,7 +35821,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &964745190
 SpriteRenderer:
@@ -36078,6 +35985,14 @@ PrefabInstance:
     - target: {fileID: 245659076763236772, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: m_Name
       value: Player_AnimObj_yy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668163149798636499, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668163149798636499, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5208098378013319851, guid: 9cfa7e2440647d543b4d938f6db2e118, type: 3}
       propertyPath: m_RootOrder
@@ -36263,9 +36178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1015292802
 Rigidbody2D:
   serializedVersion: 4
@@ -36336,7 +36248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1015292804
 SpriteRenderer:
@@ -36437,9 +36349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1051059460
 Rigidbody2D:
   serializedVersion: 4
@@ -36510,7 +36419,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1051059462
 SpriteRenderer:
@@ -36611,9 +36520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &1126359404
 Rigidbody2D:
   serializedVersion: 4
@@ -36684,7 +36590,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1126359406
 SpriteRenderer:
@@ -36785,9 +36691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1141004955
 Rigidbody2D:
   serializedVersion: 4
@@ -36858,7 +36761,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1141004957
 SpriteRenderer:
@@ -36959,9 +36862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1150507343
 Rigidbody2D:
   serializedVersion: 4
@@ -37032,7 +36932,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1150507345
 SpriteRenderer:
@@ -37133,9 +37033,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1156202606
 Rigidbody2D:
   serializedVersion: 4
@@ -37206,7 +37103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1156202608
 SpriteRenderer:
@@ -37307,9 +37204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1184709844
 Rigidbody2D:
   serializedVersion: 4
@@ -37380,7 +37274,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1184709846
 SpriteRenderer:
@@ -37481,9 +37375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1189447605
 Rigidbody2D:
   serializedVersion: 4
@@ -37554,7 +37445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1189447607
 SpriteRenderer:
@@ -37655,9 +37546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1195566899
 Rigidbody2D:
   serializedVersion: 4
@@ -37728,7 +37616,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1195566901
 SpriteRenderer:
@@ -37829,9 +37717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1213315591
 Rigidbody2D:
   serializedVersion: 4
@@ -37902,7 +37787,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1213315593
 SpriteRenderer:
@@ -38003,9 +37888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1269856942
 Rigidbody2D:
   serializedVersion: 4
@@ -38076,7 +37958,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1269856944
 SpriteRenderer:
@@ -38177,9 +38059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1344343820
 Rigidbody2D:
   serializedVersion: 4
@@ -38250,7 +38129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1344343822
 SpriteRenderer:
@@ -38351,9 +38230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1347577415
 Rigidbody2D:
   serializedVersion: 4
@@ -38424,7 +38300,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1347577417
 SpriteRenderer:
@@ -38525,9 +38401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1348229278
 Rigidbody2D:
   serializedVersion: 4
@@ -38598,7 +38471,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1348229280
 SpriteRenderer:
@@ -38699,9 +38572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1357454401
 Rigidbody2D:
   serializedVersion: 4
@@ -38772,7 +38642,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1357454403
 SpriteRenderer:
@@ -38873,9 +38743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1362836537
 Rigidbody2D:
   serializedVersion: 4
@@ -38946,7 +38813,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1362836539
 SpriteRenderer:
@@ -39148,9 +39015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1402562353
 Rigidbody2D:
   serializedVersion: 4
@@ -39221,7 +39085,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1402562355
 SpriteRenderer:
@@ -39322,9 +39186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1405770330
 Rigidbody2D:
   serializedVersion: 4
@@ -39395,7 +39256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1405770332
 SpriteRenderer:
@@ -39496,9 +39357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &1406597198
 Rigidbody2D:
   serializedVersion: 4
@@ -39569,7 +39427,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1406597200
 SpriteRenderer:
@@ -39670,9 +39528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1431885493
 Rigidbody2D:
   serializedVersion: 4
@@ -39743,7 +39598,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1431885495
 SpriteRenderer:
@@ -39844,9 +39699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1454597767
 Rigidbody2D:
   serializedVersion: 4
@@ -39917,7 +39769,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1454597769
 SpriteRenderer:
@@ -40018,9 +39870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &1473998013
 Rigidbody2D:
   serializedVersion: 4
@@ -40091,7 +39940,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1473998015
 SpriteRenderer:
@@ -40324,7 +40173,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479522550}
-  m_LocalRotation: {x: -0.07681241, y: 0.000000004288887, z: 3.3041592e-10, w: 0.9970456}
+  m_LocalRotation: {x: -0.07681242, y: -0.0000000042888866, z: -3.3041592e-10, w: 0.9970456}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -40402,9 +40251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1537054629
 Rigidbody2D:
   serializedVersion: 4
@@ -40475,7 +40321,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1537054631
 SpriteRenderer:
@@ -40576,9 +40422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1566981548
 Rigidbody2D:
   serializedVersion: 4
@@ -40649,7 +40492,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1566981550
 SpriteRenderer:
@@ -40750,9 +40593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1632189875
 Rigidbody2D:
   serializedVersion: 4
@@ -40823,7 +40663,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1632189877
 SpriteRenderer:
@@ -40924,9 +40764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1677263317
 Rigidbody2D:
   serializedVersion: 4
@@ -40997,7 +40834,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1677263319
 SpriteRenderer:
@@ -41098,9 +40935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1727693132
 Rigidbody2D:
   serializedVersion: 4
@@ -41171,7 +41005,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1727693134
 SpriteRenderer:
@@ -41272,9 +41106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1741863185
 Rigidbody2D:
   serializedVersion: 4
@@ -41345,7 +41176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1741863187
 SpriteRenderer:
@@ -41446,9 +41277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1809225065
 Rigidbody2D:
   serializedVersion: 4
@@ -41519,7 +41347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1809225067
 SpriteRenderer:
@@ -41696,7 +41524,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878931057}
-  m_LocalRotation: {x: -0.07681241, y: 0.000000004288887, z: 3.3041592e-10, w: 0.9970456}
+  m_LocalRotation: {x: -0.07681242, y: -0.0000000042888866, z: -3.3041592e-10, w: 0.9970456}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41737,9 +41565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1884789389
 Rigidbody2D:
   serializedVersion: 4
@@ -41810,7 +41635,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1884789391
 SpriteRenderer:
@@ -42061,9 +41886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &1902057361
 Rigidbody2D:
   serializedVersion: 4
@@ -42134,7 +41956,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1902057363
 SpriteRenderer:
@@ -42235,9 +42057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 0
 --- !u!50 &2031999958
 Rigidbody2D:
   serializedVersion: 4
@@ -42308,7 +42127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &2031999960
 SpriteRenderer:
@@ -42409,9 +42228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c6ac7e849586f409916d8669c74665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentBox: {fileID: 8416484275279160863, guid: af46f228ad13005409207a86648f746c, type: 3}
-  kirakiraEffect: {fileID: 2265393793282491180, guid: 750167619e8aad042b812954054067f9, type: 3}
-  generatePresent: 1
 --- !u!50 &2046104716
 Rigidbody2D:
   serializedVersion: 4
@@ -42482,7 +42298,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.557, y: 2.557}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &2046104718
 SpriteRenderer:
