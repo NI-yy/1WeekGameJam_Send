@@ -131,6 +131,7 @@ public class PlayerActionToPresentBox : MonoBehaviour
         {
             if (!(kickFlag))
             {
+                
                 //èRÇÈ
                 float diff = hit.collider.gameObject.transform.position.x - this.gameObject.transform.position.x;
                 Rigidbody2D rb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
@@ -150,7 +151,6 @@ public class PlayerActionToPresentBox : MonoBehaviour
                     //rb.velocity = new Vector2(-1f * X_kickAmount, 1f * Y_kickAmount) * Time.deltaTime * forceAmount;
                 }
 
-                Debug.Log("kick");
                 _playerController_yy.KickAnim();
                 kickFlag = true;
             }

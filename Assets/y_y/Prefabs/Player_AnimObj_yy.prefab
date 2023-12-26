@@ -210,7 +210,7 @@ MonoBehaviour:
   jumpSE: {fileID: 8300000, guid: 4a49265eb61c31b41ba1c9b369e37499, type: 3}
   landingSE: {fileID: 8300000, guid: 8600281d1a01c2c49b1a444d27c7aa2f, type: 3}
   havingBox: 0
-  rayLength: 0.35
+  rayLength: 0.4
   dash: 4
 --- !u!58 &2469981742794498181
 CircleCollider2D:
@@ -331,7 +331,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

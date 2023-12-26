@@ -69,7 +69,7 @@ public class GoalManager : MonoBehaviour
 
             Destroy(obj);
             Instantiate(GoaledParticleSystem, transform.position, Quaternion.identity);
-            _scoreManager.AddScore(50f);
+            _scoreManager.AddScore(200f);
         }
     }
 
